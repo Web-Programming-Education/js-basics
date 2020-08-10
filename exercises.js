@@ -49,6 +49,11 @@ function returnValue(someValue) {
  * 
  * Aufgabe: Deklariere die änderbare 
  * Variable "variable" ohne ihr einen Wert zuzuweisen.
+ * 
+ * Referenz: 
+ * * https://developer.mozilla.org/de/docs/Web/JavaScript/Datenstrukturen
+ * * https://developer.mozilla.org/de/docs/Web/JavaScript/Guide/Grammatik_und_Typen#Variablen
+ * * https://developer.mozilla.org/de/docs/Glossary/undefined
  */
 function undefinedVariable() {
   // TODO: deklariere die Variable `variable` mit `let`, weiße ihr aber keinen Wert zu
@@ -77,6 +82,11 @@ function undefinedVariable() {
  * 
  * Aufgabe: Definiere die konstante, nicht änderbare 
  * Variable "variable" mit dem Wert `null`, dem zweiten primitiven Datentyp in JS
+ * 
+ * Referenz: 
+ * * https://developer.mozilla.org/de/docs/Web/JavaScript/Datenstrukturen
+ * * https://developer.mozilla.org/de/docs/Web/JavaScript/Guide/Grammatik_und_Typen#Variablen
+ * * https://developer.mozilla.org/de/docs/Glossary/null
  */
 function nullVariable() {
   // TODO: Definiere eine Variable mit Zahlenwert
@@ -90,6 +100,11 @@ function nullVariable() {
  * 
  * Aufgabe: Definiere die konstante, nicht änderbare 
  * Variable "variable" mit einem Zahlenwert, dem dritten primitiven Datentyp in JS
+ * 
+ * Referenz: 
+ * * https://developer.mozilla.org/de/docs/Web/JavaScript/Datenstrukturen
+ * * https://developer.mozilla.org/de/docs/Web/JavaScript/Guide/Grammatik_und_Typen#Variablen
+ * * https://developer.mozilla.org/de/docs/Web/JavaScript/Datenstrukturen#Number_type
  */
 function numberVariable() {
   // TODO: Definiere eine Variable mit Zahlenwert
@@ -107,6 +122,9 @@ function numberVariable() {
  * 
  * Aufgabe: Addiere die Zahlenvariablen a und b, teile das Ergebnis durch 2 
  * und weise es der Variablen c zu.
+ * 
+ * Referenz:
+ * * https://developer.mozilla.org/de/docs/Web/JavaScript/Guide/Ausdruecke_und_Operatoren#Arithmetische_Operatoren_Rechenzeichen
  */
 function numberUsageSimple() {
   const a = 5;
@@ -128,6 +146,9 @@ function numberUsageSimple() {
  * (Tipp: Der Code-Editor hilft dir dabei sobald du den Punkt nach Math eingetippt hast)
  * und rufe Sie mit den beiden Variablen a und b auf.
  * Gib das Ergebnis zurück.
+ * 
+ * Referenz:
+ * * https://developer.mozilla.org/de/docs/Web/JavaScript/Guide/Numbers_and_dates#Math_Objekt
  */
 function numberUsageMath() {
   const a = 349;
@@ -148,6 +169,11 @@ function numberUsageMath() {
  * Wir verwenden im Folgenden doppelte Anführungszeichen `"`.
  * 
  * Aufgabe: Definiere die Variable "variable" mit einem beliebigen Text
+ * 
+ * Referenz: 
+ * * https://developer.mozilla.org/de/docs/Web/JavaScript/Datenstrukturen
+ * * https://developer.mozilla.org/de/docs/Web/JavaScript/Guide/Grammatik_und_Typen#Variablen
+ * * https://developer.mozilla.org/de/docs/Web/JavaScript/Datenstrukturen#String_Datentyp
  */
 function stringVariable() {
   // TODO: Definiere die Variable "variable" mit einem beliebigen Text
@@ -163,6 +189,9 @@ function stringVariable() {
  * 
  * Aufgabe: Konvertiere die Variable a, die eine Zahl darstellt,
  * in einen String und gib diesen zurück
+ * 
+ * Referenz:
+ * * https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/String/toString
  */
 function numberToString() {
   const a = 6
@@ -186,6 +215,9 @@ function numberToString() {
  * Die folgende Funktion erhählt einen String als Parameter.
  * Aufgabe: Ersetze in diesem String das Wort "float" durch "number"
  * Gib dann die Länge des Strings zurück.
+ * 
+ * Referenz:
+ * * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#Instance_methods
  */
 function stringManipulation(text) {
   // TODO: Ersetze in diesem String das Wort "float" durch "number"
@@ -205,6 +237,9 @@ function stringManipulation(text) {
  * dem 0-basierten Index zugegriffen. Bsp: array[5] für das 6. Element.
  * 
  * Aufgabe: Trenne den Text des Parameters `text` in Wörter auf.
+ * 
+ * Referenz:
+ * * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#Instance_methods
  */
 function stringToArray(text) {
   // TODO: Trenne den Text in Wörter auf
@@ -226,6 +261,11 @@ function stringToArray(text) {
  * Damit wird geprüft, ob die Variable ein Array ist.
  * Ein weiterer Hinweis, das Arrays kein eigener Datentyp sind.
  * Warum, wird später deutlich
+ * 
+ * Referenz: 
+ * * https://developer.mozilla.org/de/docs/Web/JavaScript/Datenstrukturen#Indizierte_Collections_Arrays_und_typisierte_Arrays
+ * * https://developer.mozilla.org/de/docs/Web/JavaScript/Guide/Grammatik_und_Typen#Array_Literal
+ * * https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Array
  */
 function arrayVariable() {
   // TODO: Definiere eine Variable mit einem Array
@@ -240,6 +280,9 @@ function arrayVariable() {
  * die Funktion `includes` (nicht contains oder search) genutzt.
  * 
  * Aufgabe: Gibt zurück, ob das Array die Zahl 5 enthält.
+ * 
+ * Refernez: 
+ * * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
  */
 function arrayIncludes(listOfNumbers) {
   // TODO: Erstelle eine Variable mit boolschem Wert, der angibt,
@@ -277,6 +320,10 @@ function arrayIncludes(listOfNumbers) {
  * Hinweis: es kann mehrere `return`-Anweisungen in einer Funktion geben. 
  * Alternativ kannst du eine Variable vor der Bedingung deklarieren und diese in den Verzweigungen zuweisen
  * 
+ * Referenz:
+ * * https://developer.mozilla.org/de/docs/Web/JavaScript/Datenstrukturen
+ * * https://developer.mozilla.org/de/docs/Web/JavaScript/Guide/Grammatik_und_Typen#Variablen
+ * * https://developer.mozilla.org/de/docs/Glossary/Boolean
  */
 function condition(isSomeBool) {
   // TODO: prüfen die Variable `isSomeBool` mit einer Bedingung
@@ -309,6 +356,9 @@ function condition(isSomeBool) {
  * 
  * Aufgabe: Verknüpfe die übergebenen Parameter innerhalb der `if`-Bedingung so, 
  * dass `param1` wahr und `param2` falsch sein muss.
+ * 
+ * Referenz:
+ * * https://developer.mozilla.org/de/docs/Web/JavaScript/Guide/Ausdruecke_und_Operatoren#Logische_Operatoren
  */
 function booleanExpressions(param1, param2) {
   // TODO: schreibe die `if`-Bedingung, sodass `param1` wahr und `param2` falsch sein muss.
@@ -355,6 +405,10 @@ function booleanExpressions(param1, param2) {
  * sodass der Inhalt der `if`-Verzweigung asugeführt wird.
  *
  * Gib die Ergebnisse als Array zurück
+ * 
+ * Referenz:
+ * * https://developer.mozilla.org/de/docs/Web/JavaScript/Guide/Ausdruecke_und_Operatoren#Vergleichsoperatoren
+ * * https://developer.mozilla.org/de/docs/Glossary/array
  */
 function equality() {
   const x = "abc"
@@ -416,6 +470,11 @@ function equality() {
  * * array
  * * object
  * Gib diese Objekt zurück.
+ * 
+ * Referenz:
+ * * https://developer.mozilla.org/de/docs/Glossary/Objekt
+ * * https://developer.mozilla.org/de/docs/Web/JavaScript/Guide/Grammatik_und_Typen#Objekt_Literale
+ * * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Objects
  */
 function objectVariable() {
   // TODO: erstelle ein Objekt mit genau 5 Schlüssel-/Wertpaaren
@@ -451,15 +510,16 @@ function objectVariable() {
  * Aufgabe: Die Funktion bekommt ein geschachteltes Objekt übergeben, d.h.
  * der Wert des Schlüssels "someChildObject" ist ebenfalls ein Objekt
  * Gib alle Schlüssel dieses Kind-Objekts zurück
+ * 
+ * Referenz:
+ * * https://developer.mozilla.org/de/docs/Glossary/Objekt
+ * * https://developer.mozilla.org/de/docs/Web/JavaScript/Guide/Grammatik_und_Typen#Objekt_Literale
+ * * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Objects
  */
 function objectManipulation(someObject) {
   // TODO: Gib alle Schlüssel des Kind-Objekts "someChildObject" zurück
   return Object.keys(someObject.someChildObject)
 }
-
-/**
- * Wie bereits beschrieben gibt die Funktion `Object.keys` ein Array zurück.
- */
 
 /**
  * Einfache Objekte, wie das aus der Aufgabe "objectVariable",
@@ -477,6 +537,10 @@ function objectManipulation(someObject) {
  * Konvertiere diesen String in ein Objekt.
  * Füge dem Objekt ein neues Shchlüssel-/Wertpaar hinzu: `x: 5`
  * Gibt das Objekt als JSON-String zurück
+ * 
+ * Referenz:
+ * * https://developer.mozilla.org/de/docs/Learn/JavaScript/Objects/JSON
+ * * https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/JSON
  */
 function json(someJSONString) {
   // TODO: Konvertiere den String in ein Objekt
@@ -510,6 +574,20 @@ function json(someJSONString) {
  * welche aus dem Kind-Object `someChildObject` ein Array der Objekt-Schlüssel zurückgibt,
  * mit der Variablen `testObject` auf.
  * Gib das Ergenis zurück.
+ * 
+ * Hinweis: würde die Funktion `objectManipulation` nicht nur lesend,
+ * sondern auch ändernd auf das übergebene Objekt zugreifen (z.B. `someObject.someChildObject = "neuer Wetrt"`),
+ * würde diese Änderung auch außerhalb der Funktion, d.h in unserer Tesfunktion `functionCall` sichtbar.
+ * Der Grund ist, dass bei Objekten im Vergleich zu den primitiven Datentypen nicht nur der Wert (als Kopie),
+ * sondern die Referenz auf das existierende Objekt übergeben wird. Somit weiße bei Funktionen auf dasselbe Objekt
+ * und schriebende Manipulationen beeinflussen beide.
+ * Da dies sehr undruchschaubar werden kann, sollte auf Änderungen von Objekten in einer Funktion, 
+ * wenn möglich, verzichtet werden.
+ * Besser ist dann z.B. der Einsatz von Array-Methoden, die immer ein neues Objekt erzeugen oder
+ * `Object.assign({}, obj)`, um eine Kopie eines Objektes anzulegen.
+ * 
+ * Referenz:
+ * * https://developer.mozilla.org/de/docs/Web/JavaScript/Guide/Funktionen
  */
 function functionCall() {
   const testObject = {
@@ -523,11 +601,124 @@ function functionCall() {
   return objectManipulation(testObject)
 }
 
-// FIXME: Funktionen als Variablen, Parameter etc.
+/**
+ * Der Aufruf einer Funktion kann, wenn die Funktion einen Rückgabewert liefert, einen Wert
+ * erzeugen, der einer Variablen zugewiesen oder wiederrum zurückgegeben wird. Die möglichen Datentypen
+ * haben wir bereits kennengelernt.
+ * 
+ * In JS gibt es jedoch noch eine Besonderheit im Vergleich zu anderen Programmiersprachen:
+ * Funktionen können auch Variablen zugewiesen werden und wie Objekte anderen Funktionen übergeben werden.
+ * 
+ * Die Syntax dafür sieht so aus: `let addFunction = function(x, y) { return x + y; }`
+ * 
+ * Beispiel:
+ * ```js
+ * let addFunction = function(x, y) { return x + y; }
+ * let multiplyFunction = function(x, y) { return x * y; }
+ * let callWith50 = function(x, functionToCall) { return functionToCall(x, 50) }
+ * callWith50(10, addFunction) // gibt 60 zurück
+ * callWith50(10, multiplyFunction) // gibt 500 zurück
+ * ```
+ * 
+ * Dieses Verhalten erlaubt es Funktionen zu kombinieren und flexibler einzusetzen.
+ * Außerdem kann der Aufrufer einer Funktion mit Funktionsparameter teilweise beeinflussen, was die Funktion tut.
+ * 
+ * Aufgabe: Schreibe eine Funktion als Funktionsausdruck, also wie oben gezeigt.
+ * Die Funktion soll eine mathematische Operation auf 2 Zahl ausführen, diese jedoch zuvor runden.
+ * Die Operation soll jedoch, neben den Zahlen, beliebig vom Aufrufer definierbar sein.
+ * Gib die definierte Funktion zurück.
+ * 
+ * Referenz:
+ * * https://developer.mozilla.org/de/docs/Web/JavaScript/Guide/Funktionen
+ */
+function functionExpression() {
+  return function(x, y, fn) { return fn(Math.round(x), Math.round(y)) }
+}
+
+/** 
+ * Ein weiteres Anwendungsgebiet von Funktionsparameter sind asynchrone Callbacks.
+ * Diese werden genutzt, um eine vom Aufrufer bestimmte Aktion mit einem Ergebnis auszuführen.
+ * Bei den bislang betrachteten Funktionen ist das wenig sinnvoll, wir haben ja den Rückgabewert.
+ * Mit diesem kann der Aufrufe sowieso machen was er will.
+ * 
+ * Unabdingbar sind Callbacks jedoch, wenn die Operation, die das Ergebnis berechnet/abruft
+ * eine unbekannte, lange Laufzeit hat. Beispiele sind Netzwerk oder Dateiabrufe.
+ * (Detail: Da JS single-threaded ist, kann nicht einfach in einem anderen thread weitergearbeitet und 
+ * auf das Ergebnis "gewartet" werden, wie das in anderen Programmiersprachen üblich ist)
+ * 
+ * In einem solchen Fall gibt die Funktion nicht das Ergebnis zurück,
+ * sondern der Aufrufer definiert durch ein Callback, 
+ * was nach dem Eintreffen des Ergebnisses damit getan werden soll.
+ * 
+ * Das einfachste Beispiel eines Callbacks ist die Funktion `setTimeout`,
+ * die eine Zeit in ms und eine Funktion erwartet und 
+ * die angegebene Funktion nach Ablauf der Zeit aufruft:
+ * 
+ * ```js
+ * setTimeout(function() { console.log("time is over") }, 500)
+ * ```
+ * 
+ * Aufgabe: Die Funktion bekommt eine Funktion `functionExpectingACallback` als Parameter übergeben.
+ * Diese Funktion erwartet ebenfalls eine Funktion als Parameter.
+ * Schreibe diese Funktion und rufe die Funktion `functionExpectingACallback` damit auf.
+ * Die zu schreibende Funktion soll einen Array- und einen Funktions-Parameter erwarten.
+ * Aus dem Array soll das 2. Element and die übergebene Funktion weitergegeben werden.
+ * 
+ * Hinweis: selbst wenn in der Callback-Funktion, die zu schreiben ist, ein Rückgabewert geliefert wird,
+ * kann der Aufrufer der Funktion `functionExpectingACallback` dieses Ergebnis nicht als Rückgabewert erhalten.
+ * Die Funktion wir ja im Kontext der Funktion `functionExpectingACallback` aufgerufen, welche bereits vorher
+ * komplett durchlaufen wurde, um die Ausführung nicht zu blockieren.
+ * 
+ * Referenz:
+ * * https://developer.mozilla.org/de/docs/Web/JavaScript/Guide/Funktionen
+ */
+function callback(functionExpectingACallback) {
+  // TODO: schreibe eine Funktion mit 2 Parameter: 1. Array, 2. Funkion
+  // Rufe die übergebene Funktion mit dem 2. Array-Element als Übergabeparameter auf
+  // Übergib die so definierte Funktion als Übergabeparameter an `functionExpectingACallback`
+  functionExpectingACallback(function(array, fn) { fn(array[1])})
+}
 
 /**
- * Mit dem Ergebnis der vorigen Aufgabe kann noch weitergearbeitet werden,
- * indem wir wiederum die Funktion `functionCall` aufrufen.
+ * Da der Einsatz von Funktionsparametern in JS sehr verbreitet ist,
+ * wurde 2015 die sogenannte Pfeil- oder Lambdafunktion eingeführt.
+ * 
+ * Diese 3. Art Funktionen zu definieren ist kürzer und soll aufgrund der hohen
+ * Verbreitung auch in folgender Aufgabe genutzt werden:
+ * 
+ * ```js
+ * let fn = (x,y) => x + y;
+ * let fn = (x,y) => { 
+ *  let sum = x + y; 
+ *  return sum;
+ * }
+ * ```
+ * 
+ * Folgendes unterscheidet Lambdas von Funktionsausdrücken:
+ * * kein Schlüsselwort `function`
+ * * Pfeil `=>` nach Parameterliste
+ * * keine geschweiften Klammern und `return` nötig, wenn nur eine Zeile, die ein Ergebnis liefert
+ * * bei mehreren Ausdrücken: geschweifte Klammern und `return` 
+ * 
+ * Detail: Lambda-Funktionen haben den Vorteil,
+ * dass das Schlüsselwort `this` immer auf den umgebenden Kontext verweißt.
+ * Bei den vorigen Funktionsausdrücken ist das nicht der Fall und die Referenz auf den Aufrufer geht verloren.
+ * Weiter Infos auf [MDN](https://developer.mozilla.org/de/docs/Web/JavaScript/Guide/Funktionen#Lexikalisches_this)
+ * 
+ * Aufgabe: Definiere dieselbe Funktion wie in Aufgabe `functionExpression` 
+ * als einzeiliges Lambda (ohne geschweifte Klammern und return)
+ * und gib sie zurück.
+ * 
+ * Referenz:
+ * * https://developer.mozilla.org/de/docs/Web/JavaScript/Guide/Funktionen
+ */
+function lambda() {
+  return (x, y, fn) => fn(Math.round(x), Math.round(y))
+}
+
+/**
+ * In der Aufgabe `functionCall` weiter oben haben wir eine Liste der Schlüssel
+ * eines Kindobjektes zurückgegeben.
  * 
  * Das Ergebnis (ein Array) könnte mit den, in vielen Programmiersprachen typischen,
  * Schleifenstrukturen (for, while, do..while) verarbeitet werden.
@@ -567,12 +758,15 @@ function functionCall() {
  * Aufgabe: Filtere die Schlüsselliste die die Funktion `functionCall` zurückgibt,
  * sodass nur noch Schlüssel, die das Wort "name" enthalten in einem neuen Array stehen.
  * Gib dieses Array zurück.
+ * 
+ * Referenz:
+ * * https://developer.mozilla.org/de/docs/Web/JavaScript/Guide/Funktionen
+ * * https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Array
  */
 function filter(){
   // TODO: Rufe die Funktion `functionCall` auf und speichere das Ergebnis in einer Variablen
   const arrayOfKeys = functionCall()
   // TODO: Filtere diese Array-Variable mit der Funktion `filter` und gib das Ergebnis zurück
-
   return arrayOfKeys.filter(k => k.includes("name"))
 }
 
@@ -584,13 +778,17 @@ function filter(){
  * * map: transformiert jedes Element im Array mit der angegebenen Funktion
  * * reduce: kombiniert alle Elemente eines Arrays zu einem einzigen Ergebnis
  * 
- * Für eine anschauliche Übersicht von nützlichen Funktionen siehe [./resources/js-array-methods-cheatsheet.png](./resources/js-array-methods-cheatsheet.png)
+ * Für eine anschauliche Übersicht von nützlichen Funktionen siehe [./resources/js-array-methods-cheatsheet.png](./resources/js-array-methods-cheatsheet.png) Quelle: https://twitter.com/sulco/status/1281545450273865730/photo/1
  * 
  * Aufgabe: Die Funktion erhält ein Objekt ähnlich dem aus Aufgabe `functionCall`.
  * Filtere die Schlüssel des Kind-Objekts `details`, ähnlich zur vorigen Aufgabe, 
  * sodass nur noch Schlüssel mit dem Wort "secret" enthalten sind.
  * Transformiere dieses Ergebnis, sodass du die Werte zu diesen Schlüsseln erhältst.
  * Gib diese Werte als Array zurück.
+ * 
+ * Referenz:
+ * * https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Array
+ * * https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Object
  */
 function transform(testObject) {
   // TODO: Gib alle Werte der "secret"-Schlüssel aus dem Kind-Objekt "details" zurück
@@ -602,6 +800,10 @@ function transform(testObject) {
  * 
  * Aufgabe: Gib ein geschachteltes Array mit Schlüsel-/Wertpaaren als [schlüssel, wert] zurück.
  * Der Rest entspricht der vorigen Aufgabe
+ * 
+ * Referenz:
+ * * https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Array
+ * * https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Object
  */
 function transformImproved(testObject) {
   // TODO: gib die Schlüssel zu den Werten der vorigen Aufgabe mit aus [[schlüssel, wert], [schlüssel, wert]]
@@ -613,6 +815,10 @@ function transformImproved(testObject) {
  * 
  * Aufgabe: Gib ein Objekt mit Schlüsel-/Wertpaaren zurück.
  * Der Rest entspricht der vorigen Aufgabe
+ * 
+ * Referenz:
+ * * https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Array
+ * * https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Object
  */
 function transformImprovedFurther(testObject) {
   // TODO: gib das gleiche Ergebnis wie in der vorigen Aufgabe als Objekt zurück
@@ -621,6 +827,8 @@ function transformImprovedFurther(testObject) {
   // or
   // return Object.assign({}, ...filtered.map(([key, val]) => ({[key]: val})))
 }
+
+// FIXME: spread?
 
 module.exports = {
   returnValue,
@@ -642,6 +850,9 @@ module.exports = {
   objectManipulation,
   json,
   functionCall,
+  functionExpression,
+  callback,
+  lambda,
   filter,
   transform,
   transformImproved,
