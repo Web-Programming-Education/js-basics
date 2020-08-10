@@ -13,9 +13,9 @@
  * }
  * ```
  * 
- * Die so definierte Funktion hat den Namen 'name', 
+ * Die so definierte Funktion hat den Namen "name", 
  * erhält 2 Parameter eines beliebigen Datentyps (es kann auch keiner angegeben werden)
- * und gibt den Wert des ersten Parameters 'parameter1' zurück
+ * und gibt den Wert des ersten Parameters "parameter1" zurück
  * 
  * Der Aufruf dieser Funktion erfolgt so: `name(1323, 1654)`
  * Es werden 2 Parameter angegeben der Rückgabewert wäre 1323
@@ -28,23 +28,68 @@ function returnValue(someValue) {
   return someValue;
 }
 
-// FIXME: Null & undefined
-
 /**
  * Bevor wir uns später im Detail mit Funktionen beschäftigen, 
  * betrachten wir zunächst die elementaren Datentypen und -strukturen in Javascript (JS).
  * 
  * Der Parameter `someValue` in der vorigen Aufgabe ist 
- * innerhalb der Funktion vergleichbar mit einer Variablen.
- * In der folgenden Funktion wird eine Variable zurückgegeben.
- * Diese ist jedoch noch nicht definiert.
+ * innerhalb der Funktion vergleichbar mit einer Variablen:
+ * Jeweils durch den Namen der Variable oder des Parameters, wird der Wert referenziert.
  * 
- * Variablen werden mit `let` oder mit `const` deklariert,
- * je nachdem ob deren Wert änderbar sein soll (let) oder nicht (const),
- * und durch Zuweisung definiert.
+ * In der folgenden Funktion wird eine Variable zurückgegeben.
+ * Diese ist jedoch noch nicht deklariert.
+ * 
+ * Variablen werden mit `let variablenName` oder mit `const variablenName` deklariert,
+ * je nachdem, ob deren Wert änderbar sein soll (`let`) oder nicht (`const`),
+ * und ob die Variable direkt durch Zuweisung eines Wertes definiert werden kann.
+ * (Mit `const` deklarierte Variablen müssen zugleich definiert werden)
+ * 
+ * Eine undefinierte, aber deklarierte Variable hat den Wert `undefined`.
+ * Die ist zugleich der erste primitive Datentyp in Javascript.
+ * 
+ * Aufgabe: Deklariere die änderbare 
+ * Variable "variable" ohne ihr einen Wert zuzuweisen.
+ */
+function undefinedVariable() {
+  // TODO: deklariere die Variable `variable` mit `let`, weiße ihr aber keinen Wert zu
+  let variable;
+
+  return variable;
+}
+
+
+/**
+ * Einer Variablen nicht direkt einen Wert zuzuweisen
+ * wird beim Einsatz mancher Kontrollstrukturen benötigt.
+ * 
+ * In den meisten Fällen geben wir einer Variablen aber direkt einen Wert
+ * und definieren sie dadurch.
+ * 
+ * In diesem Fall ist es ratsam das Schlüsselwort `const` zu verwenden,
+ * außer die Variable muss zwingend im weiteren Programmverlauf neu zugewiesen werden.
+ * Sich ändernde Variable führen zu einem schwerer Nachvollziehbaren Programmablauf.
+ * Aus diesem Grund nutzen wir ab jetzt, wann immer möglich,
+ * `const` für die Deklaration und Definition von Variablen.
+ * 
+ * Der zweite primitive Datentyp und "Spezialfall" neben `undefined` ist `null`.
+ * Im Unterschied zu `undefined` bedeutet die Zuweisung von `null`, 
+ * dass wir explizit ausdrücken wollen, dass einen Variable leer ist.
  * 
  * Aufgabe: Definiere die konstante, nicht änderbare 
- * Variable 'variable' mit einer Zahl als Wert, dem ersten primitiven Datentyp in JS
+ * Variable "variable" mit dem Wert `null`, dem zweiten primitiven Datentyp in JS
+ */
+function nullVariable() {
+  // TODO: Definiere eine Variable mit Zahlenwert
+  const variable = null;
+  
+  return variable;
+}
+
+/**
+ * Als nächstes arbeiten wir mit Zahlen.
+ * 
+ * Aufgabe: Definiere die konstante, nicht änderbare 
+ * Variable "variable" mit einem Zahlenwert, dem dritten primitiven Datentyp in JS
  */
 function numberVariable() {
   // TODO: Definiere eine Variable mit Zahlenwert
@@ -54,8 +99,9 @@ function numberVariable() {
 }
 
 /**
- * Der Datentyp 'number' umfasst in Javascript nicht nur ganze Zahlen wie 2, 15, 400
- * sondern auch Kommazahlen, die überlicherweise als 'floats' bezeichnet werden: 0.76, 1.2 140.00121212
+ * Der Datentyp "number" umfasst in Javascript nicht nur ganze Zahlen wie 2, 15, 400
+ * sondern auch Kommazahlen, die überlicherweise als "floats" bezeichnet werden 
+ * und in vielen anderen Programmiersprachen ein eigener Datentyp sind: 0.76, 1.2 140.00121212
  * 
  * Zahlen können wie in anderen Programmiersprachen mathematisch kombiniert werden.
  * 
@@ -92,14 +138,19 @@ function numberUsageMath() {
 }
 
 /**
- * 'Strings' dienen der Darstellung von Text 
+ * "Strings" dienen der Darstellung von Text 
  * Indem beliebiger Text in `"` oder `'` eingeschlossen wird,
- * wird ein String definiert, der 2. primitive Datentyp
+ * wird ein String definiert, der 4. primitive Datentyp
  * 
- * Aufgabe: Definiere die Variable 'variable' mit einem beliebigen Text
+ * Die Wahl zwischen `"` und `'` ist großteils Geschmackssache,
+ * da beide Methoden Vor- und Nachteile haben.
+ * Bei Interesse gibt es in [dieser Diskussion](https://stackoverflow.com/questions/242813/when-should-i-use-double-or-single-quotes-in-javascript) Details dazu.
+ * Wir verwenden im Folgenden doppelte Anführungszeichen `"`.
+ * 
+ * Aufgabe: Definiere die Variable "variable" mit einem beliebigen Text
  */
 function stringVariable() {
-  // TODO: Definiere die Variable 'variable' mit einem beliebigen Text
+  // TODO: Definiere die Variable "variable" mit einem beliebigen Text
   const variable = "some string";
   
   return variable;
@@ -133,12 +184,12 @@ function numberToString() {
  * Im Gegensatz zu Funkionen werden jedoch keine Klammern genutzt.
  * 
  * Die folgende Funktion erhählt einen String als Parameter.
- * Aufgabe: Ersetze in diesem String das Wort 'float' durch 'number'
+ * Aufgabe: Ersetze in diesem String das Wort "float" durch "number"
  * Gib dann die Länge des Strings zurück.
  */
 function stringManipulation(text) {
-  // TODO: Ersetze in diesem String das Wort 'float' durch 'number'
-  const newText = text.replace('float', 'number')
+  // TODO: Ersetze in diesem String das Wort "float" durch "number"
+  const newText = text.replace("float", "number")
   // TODO: Gib dann die Länge des Strings zurück.
   return newText.length;
 }
@@ -147,7 +198,7 @@ function stringManipulation(text) {
  * Ein String kann in Einzelteile zerlegt werden (Funktion split).
  * Dadurch entsteht eine Liste von Teilstrings.
  * 
- * Listen werden in Progammiersprachen als 'Arrays' bezeichnet und
+ * Listen werden in Progammiersprachen als "Arrays" bezeichnet und
  * sind meistens eigene Datentypen. (Spoiler: in JS nicht)
  * 
  * Auf die einzelnen Elemente eines Arrays wird mit eckigen Klammern und 
@@ -157,7 +208,7 @@ function stringManipulation(text) {
  */
 function stringToArray(text) {
   // TODO: Trenne den Text in Wörter auf
-  const wordArray = text.split(' ')
+  const wordArray = text.split(" ")
   // TODO: Gibt das 3. Wort zurück
   return wordArray[2]
 }
@@ -197,10 +248,13 @@ function arrayIncludes(listOfNumbers) {
 }
 
 /**
- * Das Ergebnis der vorigen Operation (`includes`) ist der letzte der 3 primitiven Datentypen in JS, die einen Wert darstellen:
- * 1. number (1, 43, 53)
- * 2. string ("", "asds", "asda asdlkg gfdl")
- * 3. **boolean** (true, false)
+ * Das Ergebnis der vorigen Operation (`includes`) ist der letzte der 5 primitiven Datentypen in JS:
+ * 1. undefined
+ * 2. null
+ * 3. number (1, 43, 53)
+ * 4. string ("", "asds", "asda asdlkg gfdl")
+ * 5. **boolean** (true, false)
+ * (6. Symbol - betrachten wir in dieser Einführung nicht)
  * 
  * Booleans stellen die Wahrheitswerte wahr/falsch dar.
  * Damit sind sie besonders in Kontrollstruktur relevant
@@ -230,6 +284,38 @@ function condition(isSomeBool) {
     return "ist wahr"
   } else {
     return "ist falsch"
+  }
+}
+
+/**
+ * Mehrere Wahrheitswerte können verknüpft werden.
+ * 
+ * Dafür werden sogenannte "boolesche Ausdrücke" verwendet:
+ * 
+ * `var1 && var2`: UND - Beide Werte (`var1` und `var2`) müssen wahr sein
+ * `var1 || var2`: ODER - Mindestens ein Wert (`var1` oder `var2`) muss wahr sein
+ * `!var1`: NICHT - Der Wert (`var1`) muss falsch sein
+ * 
+ * Mehrere dieser Ausdrücke lassen sich wiederum verknüpfen.
+ * Die Auswertung erfolgt dabei anhand der [Operatorrangfolge](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Operators/Operator_Precedence), 
+ * wobei `!` immer stärker bindet als `&&` und `&&` stärker als `||`.
+ * Mit Klammern kann dieses Verhalten beeinflusst werden.
+ * D.h.: 
+ * 
+ * ```js
+ * false && !false || false      // wird zu true, da `!false` zuerst ausgewertet wird, dann `false && !false` true ist und `true || false` true bleibt.
+ * false && (!false || true)     // wird zu false, da `!false` zuerst ausgewertet wird, dann `(!false || true)` true ist, aber `false && true` trotzdem false ist.
+ * ```
+ * 
+ * Aufgabe: Verknüpfe die übergebenen Parameter innerhalb der `if`-Bedingung so, 
+ * dass `param1` wahr und `param2` falsch sein muss.
+ */
+function booleanExpressions(param1, param2) {
+  // TODO: schreibe die `if`-Bedingung, sodass `param1` wahr und `param2` falsch sein muss.
+  if (param1 && !param2) {
+    return "param1 ist wahr und param2 falsch"
+  } else {
+    return "nicht ganz..."
   }
 }
 
@@ -274,9 +360,9 @@ function equality() {
   const x = "abc"
 
   // @ts-ignore
-  if (x == 'xyz') {
+  if (x == "xyz") {
     // @ts-ignore
-    console.log("true == 'true': ", true == 'true')
+    console.log("true == 'true': ", true == "true")
     // @ts-ignore
     console.log("'100' ==  100: ", "100" ==  100)    // true oder false?
     // @ts-ignore
@@ -347,15 +433,15 @@ function objectVariable() {
  * 
  * Zugriff auf den Wert eines Schlüssels `Key`: 
  * * `object.Key` (Dot-Notation) oder 
- * * `object['Key']`, wenn der Schlüssel Leerzeichen enthält
+ * * `object["Key"]`, wenn der Schlüssel Leerzeichen enthält
  * 
  * Hinzufügen eines Elements über dieselben Notationen durch Zuweisung: 
  * ```js
  * object = {}
  * object.a = 1
- * object['b wie bertha'] = 2
+ * object["b wie bertha"] = 2
  * ```
- * object: { a: 1, 'b wie bertha': 2 }
+ * object: { a: 1, "b wie bertha": 2 }
  * 
  * Funktionen für das Arbeiten mit Objekten:
  * * `Object.keys(object)`: Gibt ein Array aller Schlüssel in der Form von [Schlüssel, Schlüssel] zurück.
@@ -371,10 +457,13 @@ function objectManipulation(someObject) {
   return Object.keys(someObject.someChildObject)
 }
 
-// FIXME: map, filter, cheatsheet
+/**
+ * Wie bereits beschrieben gibt die Funktion `Object.keys` ein Array zurück.
+ */
 
 /**
- * Einfache Objekte, wie das vorige können in eine String-Darstellung überführt werden,
+ * Einfache Objekte, wie das aus der Aufgabe "objectVariable",
+ * können in eine standardisierte String-Darstellung überführt werden,
  * welche auch zur Datenübertragung genutzt wird: [JSON](https://www.json.org/json-de.html)
  * 
  * JSON besteht ebenfalls aus (geschachtelten) Schlüssel-/Wertpaaren.
@@ -398,10 +487,145 @@ function json(someJSONString) {
   return JSON.stringify(a)
 }
 
-// FIXME: functions as values, callbacks
+/**
+ * Wir haben in diesen Übungen schon viele Funktionen vervollständigt und auch aufgerufen.
+ * 
+ * Kurze Wiederholung aus der ersten Aufgabe:
+ * 
+ * Definition von Funktionen:
+ * * Funktionen werden mit dem Schlüsselwort `function` definiert
+ * * Funktionen haben (bisher) immer einen Namen
+ * * Funktionen haben keine oder beliebig viele Parameter
+ * * Funktionen bestehen innerhalb von geschweiften Klammern aus normalem Javascript
+ * * Funktionen können einen Wert zurückgeben indem das Schlüsselwort `return` vorangestellt wird
+ * 
+ * Aufrufe/Nutzen von Funktionen
+ * * Funktionen werden mit ihrem Namen gefolgt von runden Klammern aufgerufen
+ * * In den runden Klammern können durch Komma getrennt die Werte für Parameter angegeben werden
+ * 
+ * Wie wir z.B. bei Funktionen wie `text.split(...)`, `Object.keys(...)` & `JSON.parse(...)` gesehen haben,
+ * können Funktionen auch Objekten zugeordnet sein und werden dann mit Dot-Notation aufgerufen.
+ * 
+ * Aufgabe: Rufe die Funktion `objectManipulation` von weiter oben, 
+ * welche aus dem Kind-Object `someChildObject` ein Array der Objekt-Schlüssel zurückgibt,
+ * mit der Variablen `testObject` auf.
+ * Gib das Ergenis zurück.
+ */
+function functionCall() {
+  const testObject = {
+    someChildObject: {
+      name: "Max",
+      surname: "Mustermann",
+      secret: "maybe not everyone should see this" 
+    }
+  }
+
+  return objectManipulation(testObject)
+}
+
+// FIXME: Funktionen als Variablen, Parameter etc.
+
+/**
+ * Mit dem Ergebnis der vorigen Aufgabe kann noch weitergearbeitet werden,
+ * indem wir wiederum die Funktion `functionCall` aufrufen.
+ * 
+ * Das Ergebnis (ein Array) könnte mit den, in vielen Programmiersprachen typischen,
+ * Schleifenstrukturen (for, while, do..while) verarbeitet werden.
+ * In JS bieten sich jedoch einige eingebaute Array-Funktionen an,
+ * um dasselbe Ergebnis auf einfachere Weise zu erhalten.
+ * 
+ * Wollen wir z.B. aus dem Objekt oben nur Schlüssel erhalten, die mit Namen zu tun haben,
+ * könnten wir mit einer for-Schleife folgendes schreiben:
+ * 
+ * ```js
+ * let result;
+ * for (var counter = 0; counter < 3; counter++) {
+ *   const key = arrayOfKeys[counter]
+ *   if (key.includes("name")) {
+ *     result.push(key)
+ *   }
+ * }
+ * console.log(result) // gibt ['name', 'surname'] aus
+ * ```
+ * 
+ * mit einer vereinfachten for-Schleife in JS zumindest:
+ * ```js
+ * let result;
+ * for (var key of arrayOfKeys) {
+ *   if (key.includes("name")) {
+ *     result.push(key)
+ *   }
+ * }
+ * console.log(result) // gibt ['name', 'surname'] aus
+ * ```
+ * 
+ * Noch einfacher und insbesondere aussagekräftiger geht es mit der Array-Funktion `filter`,
+ * die per Dot-Notation auf einer Array-Variablen aufgerufen werden kann.
+ * Die wird mit einer Funktione aufgerufen, die als Filter dient und auf jedem Element angewandt wird.
+ * Nur Elementen, für die diese Funktion `true` zurückgibt, sind im Ergebnis (einem Array) enthalten.
+ * 
+ * Aufgabe: Filtere die Schlüsselliste die die Funktion `functionCall` zurückgibt,
+ * sodass nur noch Schlüssel, die das Wort "name" enthalten in einem neuen Array stehen.
+ * Gib dieses Array zurück.
+ */
+function filter(){
+  // TODO: Rufe die Funktion `functionCall` auf und speichere das Ergebnis in einer Variablen
+  const arrayOfKeys = functionCall()
+  // TODO: Filtere diese Array-Variable mit der Funktion `filter` und gib das Ergebnis zurück
+
+  return arrayOfKeys.filter(k => k.includes("name"))
+}
+
+/**
+ * Der große Vorteil an diesem Vorgehen ist, 
+ * dass es sich einfach mit weiteren Array-Funktionen, 
+ * die ähnlich funktionieren, kombinieren lässt, z.B.
+ * 
+ * * map: transformiert jedes Element im Array mit der angegebenen Funktion
+ * * reduce: kombiniert alle Elemente eines Arrays zu einem einzigen Ergebnis
+ * 
+ * Für eine anschauliche Übersicht von nützlichen Funktionen siehe [./resources/js-array-methods-cheatsheet.png](./resources/js-array-methods-cheatsheet.png)
+ * 
+ * Aufgabe: Die Funktion erhält ein Objekt ähnlich dem aus Aufgabe `functionCall`.
+ * Filtere die Schlüssel des Kind-Objekts `details`, ähnlich zur vorigen Aufgabe, 
+ * sodass nur noch Schlüssel mit dem Wort "secret" enthalten sind.
+ * Transformiere dieses Ergebnis, sodass du die Werte zu diesen Schlüsseln erhältst.
+ * Gib diese Werte als Array zurück.
+ */
+function transform(testObject) {
+  // TODO: Gib alle Werte der "secret"-Schlüssel aus dem Kind-Objekt "details" zurück
+  return Object.keys(testObject.details).filter(k => k.includes("secret")).map(k => testObject.details[k])
+}
+
+/**
+ * Bonus: in der vorigen Aufgabe ging beim Ergebnis die Zuordnung zu den Schlüsseln verloren.
+ * 
+ * Aufgabe: Gib ein geschachteltes Array mit Schlüsel-/Wertpaaren als [schlüssel, wert] zurück.
+ * Der Rest entspricht der vorigen Aufgabe
+ */
+function transformImproved(testObject) {
+  // TODO: gib die Schlüssel zu den Werten der vorigen Aufgabe mit aus [[schlüssel, wert], [schlüssel, wert]]
+  return Object.entries(testObject.details).filter(([k]) => k.includes("secret"))
+}
+
+/**
+ * Bonus 2: in der vorigen Aufgabe war das Ergebnis ein geschachteltes Array.
+ * 
+ * Aufgabe: Gib ein Objekt mit Schlüsel-/Wertpaaren zurück.
+ * Der Rest entspricht der vorigen Aufgabe
+ */
+function transformImprovedFurther(testObject) {
+  // TODO: gib das gleiche Ergebnis wie in der vorigen Aufgabe als Objekt zurück
+  const filtered = Object.entries(testObject.details).filter(([k]) => k.includes("secret"));
+  return Object.fromEntries(filtered)
+  // or
+  // return Object.assign({}, ...filtered.map(([key, val]) => ({[key]: val})))
+}
 
 module.exports = {
   returnValue,
+  undefinedVariable,
+  nullVariable,
   numberVariable,
   numberUsageSimple,
   numberUsageMath,
@@ -412,8 +636,14 @@ module.exports = {
   arrayVariable,
   arrayIncludes,
   condition,
+  booleanExpressions,
   equality,
   objectVariable,
   objectManipulation,
-  json
+  json,
+  functionCall,
+  filter,
+  transform,
+  transformImproved,
+  transformImprovedFurther
 }

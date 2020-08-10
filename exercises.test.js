@@ -7,6 +7,17 @@ test('returnValue: returns the parameter as is', () => {
   expect(exercises.returnValue(true)).toBe(true);
 });
 
+test('undefinedVariable: returns a number variable', () => {
+  expect(typeof exercises.undefinedVariable()).toBe("undefined");
+  expect(exercises.undefinedVariable.toString()).toContain('let')
+})
+
+test('nullVariable: returns a number variable', () => {
+  expect(typeof exercises.nullVariable()).toBe("object");
+  expect(exercises.nullVariable.toString()).toContain('const')
+  expect(exercises.nullVariable.toString()).toContain('null')
+})
+
 test('numberVariable: returns a number variable', () => {
   expect(typeof exercises.numberVariable()).toBe("number");
   expect(exercises.numberVariable.toString()).toContain('const')
@@ -60,6 +71,11 @@ test('condition: returns the correct string based on the boolean variable', () =
   expect(exercises.condition.toString()).toContain('if')
 })
 
+test('booleanExpressions: returns the correct string based on the boolean variable', () => {
+  expect(exercises.booleanExpressions(true, false)).toBe("param1 ist wahr und param2 falsch");
+  expect(exercises.booleanExpressions(false, true)).toBe("nicht ganz...");
+})
+
 test('equality: returns the results of sometimes confusing type conversion equalities', () => {
   expect(exercises.equality()).toEqual([false, true, false, true, true, false, false, false]);
 })
@@ -95,4 +111,56 @@ test('objectManipulation: returns a array variable', () => {
 test('json: returns a array variable', () => {
   expect(typeof exercises.json('{"y": 3}')).toBe("string");
   expect(exercises.json('{"y": 3}')).toBe('{"y":3,"x":5}');
+})
+
+test('functionCall: returns a array variable', () => {
+  expect(exercises.functionCall()).toEqual(["name", "surname", "secret"]);
+})
+
+test('filter: returns a array variable', () => {
+  expect(exercises.filter.toString()).toContain("filter")
+  expect(exercises.filter()).toEqual(["name", "surname"]);
+})
+
+test('transform: returns a array variable', () => {
+  const testObject = { 
+    name: "Max",
+    details: { 
+      job: "Software developer",
+      secretSalary: 65000,
+      secretIBAN: "DE59 2309 2304 5849 2101" 
+    } 
+  }
+  
+  expect(exercises.transform.toString()).toContain("map")
+  expect(exercises.transform(testObject)).toEqual([65000, "DE59 2309 2304 5849 2101"]);
+})
+
+test('transformImproved: returns a array variable', () => {
+  const testObject = { 
+    name: "Max",
+    details: { 
+      job: "Software developer",
+      secretSalary: 65000,
+      secretIBAN: "DE59 2309 2304 5849 2101" 
+    } 
+  }
+  
+  expect(exercises.transformImproved(testObject)).toEqual([["secretSalary", 65000], ["secretIBAN", "DE59 2309 2304 5849 2101"]]);
+})
+
+test('transformImprovedFurther: returns a array variable', () => {
+  const testObject = { 
+    name: "Max",
+    details: { 
+      job: "Software developer",
+      secretSalary: 65000,
+      secretIBAN: "DE59 2309 2304 5849 2101" 
+    } 
+  }
+  
+  const res = exercises.transformImprovedFurther(testObject)
+
+  expect(res).toHaveProperty("secretSalary", 65000)
+  expect(res).toHaveProperty("secretIBAN", "DE59 2309 2304 5849 2101");
 })
