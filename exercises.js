@@ -9,7 +9,7 @@
  * Bsp:
  * ```
  * function name(parameter1, parameter2) {
- *   return parameter1
+ *   return parameter1;
  * }
  * ```
  * 
@@ -20,8 +20,21 @@
  * Der Aufruf dieser Funktion erfolgt so: `name(1323, 1654)`
  * Es werden 2 Parameter angegeben der Rückgabewert wäre 1323
  * 
+ * Eine Funktion in Javascript kann einer mathematischen Funktion sehr ähnlich sein.
+ * In der Mathematik ist beispielsweise eine Gerade durch eine Gleichung definiert:
+ * ```
+ * f(x) = 5 * x + 2
+ * ```
+ * Diese Funktion hat für verschiedene Parameter (x) unterschiedliche Ergebnisse/Rückgabewerte (f(2) = 12 etc.)
+ * In Javascript sieht diese Funktion so aus:
+ * ```
+ * function f(x) {
+ *    return 5 * x + 2;
+ * }
+ * ```
+ * 
  * Die folgende Funktion `returnValue` hat einen Parameter `someValue` und tut aktuell nichts
- * Aufgabe: Gib den Wert des Parameters wieder zurück, um eine erste, nicht sehr hilfreich aber funktionsfähige Funktion zu schrieben. 
+ * **Aufgabe**: Gib den Wert des Parameters wieder zurück, um eine erste, nicht sehr hilfreich aber funktionsfähige Funktion zu schrieben. 
  */
 function returnValue(someValue) {
   // TODO: Gib `someValue` zurück
@@ -34,7 +47,7 @@ function returnValue(someValue) {
  * 
  * Der Parameter `someValue` in der vorigen Aufgabe ist 
  * innerhalb der Funktion vergleichbar mit einer Variablen:
- * Jeweils durch den Namen der Variable oder des Parameters, wird der Wert referenziert.
+ * Jeweils durch den Namen der Variable oder des Parameters, wird auf den Wert zugegriffen.
  * 
  * In der folgenden Funktion wird eine Variable zurückgegeben.
  * Diese ist jedoch noch nicht deklariert.
@@ -47,7 +60,7 @@ function returnValue(someValue) {
  * Eine undefinierte, aber deklarierte Variable hat den Wert `undefined`.
  * Die ist zugleich der erste primitive Datentyp in Javascript.
  * 
- * Aufgabe: Deklariere die änderbare 
+ * **Aufgabe**: Deklariere die änderbare 
  * Variable "variable" ohne ihr einen Wert zuzuweisen.
  * 
  * Referenz: 
@@ -72,7 +85,7 @@ function undefinedVariable() {
  * 
  * In diesem Fall ist es ratsam das Schlüsselwort `const` zu verwenden,
  * außer die Variable muss zwingend im weiteren Programmverlauf neu zugewiesen werden.
- * Sich ändernde Variable führen zu einem schwerer Nachvollziehbaren Programmablauf.
+ * Sich ändernde Variable führen zu einem schwerer nachvollziehbaren Programmablauf.
  * Aus diesem Grund nutzen wir ab jetzt, wann immer möglich,
  * `const` für die Deklaration und Definition von Variablen.
  * 
@@ -80,7 +93,7 @@ function undefinedVariable() {
  * Im Unterschied zu `undefined` bedeutet die Zuweisung von `null`, 
  * dass wir explizit ausdrücken wollen, dass einen Variable leer ist.
  * 
- * Aufgabe: Definiere die konstante, nicht änderbare 
+ * **Aufgabe**: Definiere die konstante, nicht änderbare 
  * Variable "variable" mit dem Wert `null`, dem zweiten primitiven Datentyp in JS
  * 
  * Referenz: 
@@ -98,7 +111,7 @@ function nullVariable() {
 /**
  * Als nächstes arbeiten wir mit Zahlen.
  * 
- * Aufgabe: Definiere die konstante, nicht änderbare 
+ * **Aufgabe**: Definiere die konstante, nicht änderbare 
  * Variable "variable" mit einem Zahlenwert, dem dritten primitiven Datentyp in JS
  * 
  * Referenz: 
@@ -120,7 +133,7 @@ function numberVariable() {
  * 
  * Zahlen können wie in anderen Programmiersprachen mathematisch kombiniert werden.
  * 
- * Aufgabe: Addiere die Zahlenvariablen a und b, teile das Ergebnis durch 2 
+ * **Aufgabe**: Addiere die Zahlenvariablen a und b, teile das Ergebnis durch 2 
  * und weise es der Variablen c zu.
  * 
  * Referenz:
@@ -130,7 +143,7 @@ function numberUsageSimple() {
   const a = 5;
   const b = 2.75;
 
-  // TODO: Definiere die Variable c, nutzen dabei die Variablen c, um das gewünscht Ergebnis zu erhalten.
+  // TODO: Definiere die Variable c, nutze dabei die Variablen a und b, um das gewünscht Ergebnis zu erhalten.
   const c = (a + b) / 2;
 
   return c;
@@ -142,7 +155,7 @@ function numberUsageSimple() {
  * 
  * Die Funktionen werden per Dot-Notation aufgerufen: `Math.<Funktionsname>`
  * 
- * Aufgabe: Finde die Funktion zum Berchnen des Maximums 
+ * **Aufgabe**: Finde die Funktion zum Berechnen des Maximums 
  * (Tipp: Der Code-Editor hilft dir dabei sobald du den Punkt nach Math eingetippt hast)
  * und rufe Sie mit den beiden Variablen a und b auf.
  * Gib das Ergebnis zurück.
@@ -168,7 +181,7 @@ function numberUsageMath() {
  * Bei Interesse gibt es in [dieser Diskussion](https://stackoverflow.com/questions/242813/when-should-i-use-double-or-single-quotes-in-javascript) Details dazu.
  * Wir verwenden im Folgenden doppelte Anführungszeichen `"`.
  * 
- * Aufgabe: Definiere die Variable "variable" mit einem beliebigen Text
+ * **Aufgabe**: Definiere die Variable "variable" mit einem beliebigen Text
  * 
  * Referenz: 
  * * https://developer.mozilla.org/de/docs/Web/JavaScript/Datenstrukturen
@@ -187,7 +200,7 @@ function stringVariable() {
  * 
  * Variablen aller Datentypen besitzen zu diesem Zweck die Funktion `toString`
  * 
- * Aufgabe: Konvertiere die Variable a, die eine Zahl darstellt,
+ * **Aufgabe**: Konvertiere die Variable a, die eine Zahl darstellt,
  * in einen String und gib diesen zurück
  * 
  * Referenz:
@@ -213,7 +226,7 @@ function numberToString() {
  * Im Gegensatz zu Funkionen werden jedoch keine Klammern genutzt.
  * 
  * Die folgende Funktion erhählt einen String als Parameter.
- * Aufgabe: Ersetze in diesem String das Wort "float" durch "number"
+ * **Aufgabe**: Ersetze in diesem String das Wort "float" durch "number"
  * Gib dann die Länge des Strings zurück.
  * 
  * Referenz:
@@ -236,7 +249,7 @@ function stringManipulation(text) {
  * Auf die einzelnen Elemente eines Arrays wird mit eckigen Klammern und 
  * dem 0-basierten Index zugegriffen. Bsp: array[5] für das 6. Element.
  * 
- * Aufgabe: Trenne den Text des Parameters `text` in Wörter auf.
+ * **Aufgabe**: Trenne den Text des Parameters `text` in Wörter auf.
  * 
  * Referenz:
  * * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#Instance_methods
@@ -251,13 +264,13 @@ function stringToArray(text) {
 /**
  * Um ein Array manuell anzulegen nutze eckige Klammern gefolgt von durch Komma getrennte Werte.
  * 
- * Aufgabe: Definiere eine Variable mit einem Array mit 
+ * **Aufgabe**: Definiere eine Variable mit einem Array mit 
  * genau 2 Elementen eines beliebigen primitiven Datentyps
  * 
  * Hinweis: Die Testfunktion zu der folgenden Funktion,
  * siehe ([exercises.test.js](exercises.test.js), Test: arrayVariable), kann
  * im Vergleich zu den vorigen Datentyp-Aufgaben, nicht einfach den Datentyp prüfen, 
- * sondern muss eine spezielle Funktion: `Array.isArray`.
+ * sondern muss eine spezielle Funktion: `Array.isArray` aufrufen.
  * Damit wird geprüft, ob die Variable ein Array ist.
  * Ein weiterer Hinweis, das Arrays kein eigener Datentyp sind.
  * Warum, wird später deutlich
@@ -279,7 +292,7 @@ function arrayVariable() {
  * Um z.B. zu prüfen, ob ein Array einen bestimmten Wert enthält, wird
  * die Funktion `includes` (nicht contains oder search) genutzt.
  * 
- * Aufgabe: Gibt zurück, ob das Array die Zahl 5 enthält.
+ * **Aufgabe**: Gibt zurück, ob das Array die Zahl 5 enthält.
  * 
  * Refernez: 
  * * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
@@ -310,7 +323,7 @@ function arrayIncludes(listOfNumbers) {
  * }
  * ```
  * 
- * Aufgabe:  
+ * **Aufgabe**:  
  * Überprüfe die Variable `isSomeBool` mit einer Bedingung, wie im obigen Beispiel.
  * Gib `"ist wahr"` zurück wenn `isSomeBool` wahr ist.
  * `if`-Verzweigungen können auch einen "sonst"-Fall haben.
@@ -354,7 +367,7 @@ function condition(isSomeBool) {
  * false && (!false || true)     // wird zu false, da `!false` zuerst ausgewertet wird, dann `(!false || true)` true ist, aber `false && true` trotzdem false ist.
  * ```
  * 
- * Aufgabe: Verknüpfe die übergebenen Parameter innerhalb der `if`-Bedingung so, 
+ * **Aufgabe**: Verknüpfe die übergebenen Parameter innerhalb der `if`-Bedingung so, 
  * dass `param1` wahr und `param2` falsch sein muss.
  * 
  * Referenz:
@@ -398,11 +411,11 @@ function booleanExpressions(param1, param2) {
  * 
  * Siehe dazu auch: FIXME: Folien-Link
  * 
- * Aufgabe: Finde heraus, warum die automatische Typkonvertierung problematisch sein kann.
+ * **Aufgabe**: Finde heraus, warum die automatische Typkonvertierung problematisch sein kann.
  * Die Funktion `console.log` schreibt beliebige Variablen auf die Konsole/Terminal
  * Du findest die Ausgabe, wenn du die Tests ausführst.
  * Vorher musst du die existierende Bedingung jedoch korrigieren,
- * sodass der Inhalt der `if`-Verzweigung asugeführt wird.
+ * sodass der Inhalt der `if`-Verzweigung ausgeführt wird.
  *
  * Gib die Ergebnisse als Array zurück
  * 
@@ -453,7 +466,7 @@ function equality() {
  * Dies ist die Erklärung zum Hinweis zur Aufgabe "arrayVariable" weiter oben: 
  * Die Funktion `Array.isArray()` wird benötigt, da der Typ eines Arrays immer `object` ist
  * 
- * Aufgabe: Erstelle ein einfaches Objekt mit 5 Schlüssel-/Wertpaaren. 
+ * **Aufgabe**: Erstelle ein einfaches Objekt mit 5 Schlüssel-/Wertpaaren. 
  * Nutze die folgende Form um ein solches Objekt anzulegen:
  * 
  * ```js
@@ -463,7 +476,7 @@ function equality() {
  * }
  * ```
  * 
- * Nutze für für die Werte alle der folgenden Datentypen:
+ * Nutze für die Werte alle der folgenden Datentypen:
  * * string
  * * number
  * * boolean
@@ -488,7 +501,7 @@ function objectVariable() {
 }
 
 /**
- * Auch Objekte können asugewertet und bearbeitet werden.
+ * Auch Objekte können ausgewertet und bearbeitet werden.
  * 
  * Zugriff auf den Wert eines Schlüssels `Key`: 
  * * `object.Key` (Dot-Notation) oder 
@@ -506,8 +519,11 @@ function objectVariable() {
  * * `Object.keys(object)`: Gibt ein Array aller Schlüssel in der Form von [Schlüssel, Schlüssel] zurück.
  * * `Object.values(object)`: Gibt ein Array aller Werte in der Form von [Wert, Wert] zurück.
  * * `Object.entries(object)`: Gibt ein geschachteltes Array in der Form von [[Schlüssel, Wert], [Schlüssel, Wert]] zurück.
+ * Hinweis: `Object` ist ein globales Objekt in Javascript das ähnlich wie `Math` hilfreiche Funktionen zur Verfügung stellt.
+ * Es ist nicht zu verwechseln mit dem von uns angelegten Objekt `object`,
+ * welches jeweils als Parameter an die Hilfsfunktionen übergeben wird 
  * 
- * Aufgabe: Die Funktion bekommt ein geschachteltes Objekt übergeben, d.h.
+ * **Aufgabe**: Die Funktion bekommt ein geschachteltes Objekt übergeben, d.h.
  * der Wert des Schlüssels "someChildObject" ist ebenfalls ein Objekt
  * Gib alle Schlüssel dieses Kind-Objekts zurück
  * 
@@ -533,7 +549,7 @@ function objectManipulation(someObject) {
  * * `JSON.parse(sring)`, um aus einem String ein Javascript Objekt zu machen
  * * `JSON.stringify(object)`, um aus einem Objekt einen JSON-String zu machen
  * 
- * Aufgabe: Die Funktion bekommt einen JSON-String als Parameter.
+ * **Aufgabe**: Die Funktion bekommt einen JSON-String als Parameter.
  * Konvertiere diesen String in ein Objekt.
  * Füge dem Objekt ein neues Shchlüssel-/Wertpaar hinzu: `x: 5`
  * Gibt das Objekt als JSON-String zurück
@@ -570,13 +586,13 @@ function json(someJSONString) {
  * Wie wir z.B. bei Funktionen wie `text.split(...)`, `Object.keys(...)` & `JSON.parse(...)` gesehen haben,
  * können Funktionen auch Objekten zugeordnet sein und werden dann mit Dot-Notation aufgerufen.
  * 
- * Aufgabe: Rufe die Funktion `objectManipulation` von weiter oben, 
+ * **Aufgabe**: Rufe die Funktion `objectManipulation` von weiter oben, 
  * welche aus dem Kind-Object `someChildObject` ein Array der Objekt-Schlüssel zurückgibt,
  * mit der Variablen `testObject` auf.
  * Gib das Ergenis zurück.
  * 
  * Hinweis: würde die Funktion `objectManipulation` nicht nur lesend,
- * sondern auch ändernd auf das übergebene Objekt zugreifen (z.B. `someObject.someChildObject = "neuer Wetrt"`),
+ * sondern auch ändernd auf das übergebene Objekt zugreifen (z.B. `someObject.someChildObject = "neuer Wert"`),
  * würde diese Änderung auch außerhalb der Funktion, d.h in unserer Tesfunktion `functionCall` sichtbar.
  * Der Grund ist, dass bei Objekten im Vergleich zu den primitiven Datentypen nicht nur der Wert (als Kopie),
  * sondern die Referenz auf das existierende Objekt übergeben wird. Somit weiße bei Funktionen auf dasselbe Objekt
@@ -623,8 +639,8 @@ function functionCall() {
  * Dieses Verhalten erlaubt es Funktionen zu kombinieren und flexibler einzusetzen.
  * Außerdem kann der Aufrufer einer Funktion mit Funktionsparameter teilweise beeinflussen, was die Funktion tut.
  * 
- * Aufgabe: Schreibe eine Funktion als Funktionsausdruck, also wie oben gezeigt.
- * Die Funktion soll eine mathematische Operation auf 2 Zahl ausführen, diese jedoch zuvor runden.
+ * **Aufgabe**: Schreibe eine Funktion als Funktionsausdruck, also wie oben gezeigt.
+ * Die Funktion soll eine mathematische Operation auf 2 Zahlen ausführen, diese jedoch zuvor runden.
  * Die Operation soll jedoch, neben den Zahlen, beliebig vom Aufrufer definierbar sein.
  * Gib die definierte Funktion zurück.
  * 
@@ -658,11 +674,11 @@ function functionExpression() {
  * setTimeout(function() { console.log("time is over") }, 500)
  * ```
  * 
- * Aufgabe: Die Funktion bekommt eine Funktion `functionExpectingACallback` als Parameter übergeben.
+ * **Aufgabe**: Die Funktion bekommt eine Funktion `functionExpectingACallback` als Parameter übergeben.
  * Diese Funktion erwartet ebenfalls eine Funktion als Parameter.
  * Schreibe diese Funktion und rufe die Funktion `functionExpectingACallback` damit auf.
  * Die zu schreibende Funktion soll einen Array- und einen Funktions-Parameter erwarten.
- * Aus dem Array soll das 2. Element and die übergebene Funktion weitergegeben werden.
+ * Aus dem Array soll das 2. Element an die übergebene Funktion weitergegeben werden.
  * 
  * Hinweis: selbst wenn in der Callback-Funktion, die zu schreiben ist, ein Rückgabewert geliefert wird,
  * kann der Aufrufer der Funktion `functionExpectingACallback` dieses Ergebnis nicht als Rückgabewert erhalten.
@@ -705,7 +721,7 @@ function callback(functionExpectingACallback) {
  * Bei den vorigen Funktionsausdrücken ist das nicht der Fall und die Referenz auf den Aufrufer geht verloren.
  * Weiter Infos auf [MDN](https://developer.mozilla.org/de/docs/Web/JavaScript/Guide/Funktionen#Lexikalisches_this)
  * 
- * Aufgabe: Definiere dieselbe Funktion wie in Aufgabe `functionExpression` 
+ * **Aufgabe**: Definiere dieselbe Funktion wie in Aufgabe `functionExpression` 
  * als einzeiliges Lambda (ohne geschweifte Klammern und return)
  * und gib sie zurück.
  * 
@@ -755,7 +771,7 @@ function lambda() {
  * Die wird mit einer Funktione aufgerufen, die als Filter dient und auf jedem Element angewandt wird.
  * Nur Elementen, für die diese Funktion `true` zurückgibt, sind im Ergebnis (einem Array) enthalten.
  * 
- * Aufgabe: Filtere die Schlüsselliste die die Funktion `functionCall` zurückgibt,
+ * **Aufgabe**: Filtere die Schlüsselliste die die Funktion `functionCall` zurückgibt,
  * sodass nur noch Schlüssel, die das Wort "name" enthalten in einem neuen Array stehen.
  * Gib dieses Array zurück.
  * 
@@ -780,7 +796,7 @@ function filter(){
  * 
  * Für eine anschauliche Übersicht von nützlichen Funktionen siehe [./resources/js-array-methods-cheatsheet.png](./resources/js-array-methods-cheatsheet.png) Quelle: https://twitter.com/sulco/status/1281545450273865730/photo/1
  * 
- * Aufgabe: Die Funktion erhält ein Objekt ähnlich dem aus Aufgabe `functionCall`.
+ * **Aufgabe**: Die Funktion erhält ein Objekt ähnlich dem aus Aufgabe `functionCall`.
  * Filtere die Schlüssel des Kind-Objekts `details`, ähnlich zur vorigen Aufgabe, 
  * sodass nur noch Schlüssel mit dem Wort "secret" enthalten sind.
  * Transformiere dieses Ergebnis, sodass du die Werte zu diesen Schlüsseln erhältst.
@@ -798,7 +814,7 @@ function transform(testObject) {
 /**
  * Bonus: in der vorigen Aufgabe ging beim Ergebnis die Zuordnung zu den Schlüsseln verloren.
  * 
- * Aufgabe: Gib ein geschachteltes Array mit Schlüsel-/Wertpaaren als [schlüssel, wert] zurück.
+ * **Aufgabe**: Gib ein geschachteltes Array mit Schlüsel-/Wertpaaren als [schlüssel, wert] zurück.
  * Der Rest entspricht der vorigen Aufgabe
  * 
  * Referenz:
@@ -813,7 +829,7 @@ function transformImproved(testObject) {
 /**
  * Bonus 2: in der vorigen Aufgabe war das Ergebnis ein geschachteltes Array.
  * 
- * Aufgabe: Gib ein Objekt mit Schlüsel-/Wertpaaren zurück.
+ * **Aufgabe**: Gib ein Objekt mit Schlüsel-/Wertpaaren zurück.
  * Der Rest entspricht der vorigen Aufgabe
  * 
  * Referenz:
