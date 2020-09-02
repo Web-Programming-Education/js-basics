@@ -125,11 +125,15 @@ test('functionExpression: returns a function which caluclates any operation on 2
   expect(func(10.1, 1.6, function(x,y) { return x + y })).toBe(12);
 })
 
-test('callback: passes a callback function which calls a passed callback function to get the 2nd array element', () => {
-  exercises.callback(function(fn) {
-    fn([1,42,19], function(value) { expect(value).toBe(42) })
-  })
-})
+test('callback: passes a callback function which calls a passed callback function to get the 2nd array element', done => {
+  try {
+    exercises.callback(function(fn) {
+      fn([1,42,19], function(value) { expect(value).toBe(42); done() })
+    })
+  } catch (error) {
+    done(error)
+  }
+}, 10)
 
 test('lambda:  returns a lambda which caluclates any operation on 2 numbers', () => {
   let func = exercises.lambda()
