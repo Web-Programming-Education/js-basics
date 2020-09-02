@@ -46,7 +46,12 @@ In diesem Terminal wird der obige Befehl eingegeben und danach auch die Testausf
 
     Die Tests werden initial und bei jeder Änderung in der Datei [exercises.js](exercises.js) ausgeführt und es wird ein Gesamtüberblick über die Erfolgsquote ausgegeben.
 
-    TODO: syntax der Fehlermeldung beschreiben
+    Pro Fehler gibt es eine detaillierte Ausgabe mit der Beschreibung des Fehlergrundes:
+
+    * Rote Überschrift: fehlerhafter Testfall - bei uns immer der Name der Funktion in `exercises.js` gefolgt vom erwarteten Ergebnis
+    * Darunter der Testcode der fehlschlägt (hiermit kann nachvollzogen werden, was der Test prüft)
+    * Darunter findet sich die Auflistung des erwarteten und des tatsächlich erhaltenen Wertes (diese stimmen bei erfolgreichem Test überein)
+    * Darunter ist ein Auszug des Tests angegeben (hilft vermutlich erstmal nicht, kann aber in der Datei `exercises.test.js` wiedergefunden werden)
 
 2. Aufgabe bearbeiten
 
