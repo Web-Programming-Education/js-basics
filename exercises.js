@@ -88,7 +88,7 @@ function undefinedVariable() {
  * * https://developer.mozilla.org/de/docs/Glossary/null
  */
 function nullVariable() {
-  // TODO: Definiere eine Variable mit Zahlenwert
+  // TODO: Definiere eine Variable mit null
   
   return variable;
 }
