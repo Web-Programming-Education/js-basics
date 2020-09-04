@@ -8,6 +8,8 @@ Dieses Verzeichnis enthält Übungen für die Grundlagen in Javascript.
 * (optional, aber empfohlen) VS Code Erweiterungen installiert
   * [JSDoc Markdown highlight](https://marketplace.visualstudio.com/items?itemName=bierner.jsdoc-markdown-highlighting)
   * [TODO Highlight](https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight)
+  * [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+    * VS Code fragt möglicherweise nach der Installation durch `npm install` (siehe unten), ob die lokale eslint-Installtion genutzt werden soll. Dies sollte bestätigt werden, um diese Erweiterung zu nutzen.
 
 ## Aufbau
 
@@ -17,6 +19,8 @@ Dieses Verzeichnis enthält Übungen für die Grundlagen in Javascript.
 ├── package.json          => Diese Datei enthält Informationen zu diesem Projekt und den benötigten Abhängigkeiten
 └── readme.md             => Diese Datei
 ```
+
+## Vorbereitung 
 
 Um die Aufgaben bearbeiten zu können, müsen zunächst einige Hilfspakete als Abhängigkeiten installiert werden.
 
