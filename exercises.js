@@ -88,6 +88,7 @@ function undefinedVariable() {
  */
 function nullVariable() {
   const variable = null;
+
   return variable;
 }
 
@@ -148,7 +149,7 @@ function numberUsageMath() {
   const a = 349;
   const b = 1237;
 
-  return Math.max(a, b)
+  return Math.max(a, b);
 }
 
 /**
@@ -187,9 +188,9 @@ function stringVariable() {
  * * https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/String/toString
  */
 function numberToString() {
-  const a = 6
+  const a = 6;
 
-  return a.toString()
+  return a.toString();
 }
 
 /**
@@ -214,7 +215,7 @@ function numberToString() {
  * * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#Instance_methods
  */
 function stringManipulation(text) {
-  const newText = text.replace("float", "number")
+  const newText = text.replace("float", "number");
   return newText.length;
 }
 
@@ -234,8 +235,8 @@ function stringManipulation(text) {
  * * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#Instance_methods
  */
 function stringToArray(text) {
-  const wordArray = text.split(" ")
-  return wordArray[2]
+  const wordArray = text.split(" ");
+  return wordArray[2];
 }
 
 /**
@@ -274,7 +275,7 @@ function arrayVariable() {
  * * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
  */
 function arrayIncludes(listOfNumbers) {
-  return listOfNumbers.includes(5)
+  return listOfNumbers.includes(5);
 }
 
 /**
@@ -314,9 +315,9 @@ function arrayIncludes(listOfNumbers) {
  */
 function condition(isSomeBool) {
   if (isSomeBool) {
-    return "ist wahr"
+    return "ist wahr";
   } else {
-    return "ist falsch"
+    return "ist falsch";
   }
 }
 
@@ -348,9 +349,9 @@ function condition(isSomeBool) {
  */
 function booleanExpressions(param1, param2) {
   if (param1 && !param2) {
-    return "param1 ist wahr und param2 falsch"
+    return "param1 ist wahr und param2 falsch";
   } else {
-    return "nicht ganz..."
+    return "nicht ganz...";
   }
 }
 
@@ -396,7 +397,7 @@ function booleanExpressions(param1, param2) {
  * * https://developer.mozilla.org/de/docs/Glossary/array
  */
 function equality() {
-  const x = "abc"
+  const x = "abc";
 
   // @ts-ignore
   if (x == "xyz") {
@@ -418,7 +419,7 @@ function equality() {
     console.log("NaN ==  NaN: ", NaN ==  NaN)
   }
 
-  return [ false, true, false, true, true, false, false, false]
+  return [ false, true, false, true, true, false, false, false];
 }
 
 /**
@@ -467,7 +468,7 @@ function objectVariable() {
     c: true,
     d: [1,2,3],
     e: { x: 1 }
-  }
+  };
 }
 
 /**
@@ -500,7 +501,7 @@ function objectVariable() {
  * * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Objects
  */
 function objectManipulation(someObject) {
-  return Object.keys(someObject.someChildObject)
+  return Object.keys(someObject.someChildObject);
 }
 
 /**
@@ -525,9 +526,9 @@ function objectManipulation(someObject) {
  * * https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/JSON
  */
 function json(someJSONString) {
-  const a = JSON.parse(someJSONString)
-  a.x = 5
-  return JSON.stringify(a)
+  const a = JSON.parse(someJSONString);
+  a.x = 5;
+  return JSON.stringify(a);
 }
 
 /**
@@ -575,9 +576,9 @@ function functionCall() {
       surname: "Mustermann",
       secret: "maybe not everyone should see this" 
     }
-  }
+  };
 
-  return objectManipulation(testObject)
+  return objectManipulation(testObject);
 }
 
 /**
@@ -611,7 +612,9 @@ function functionCall() {
  * * https://developer.mozilla.org/de/docs/Web/JavaScript/Guide/Funktionen
  */
 function functionExpression() {
-  return function(x, y, fn) { return fn(Math.round(x), Math.round(y)) }
+  return function(x, y, fn) { 
+    return fn(Math.round(x), Math.round(y));
+  };
 }
 
 /** 
@@ -652,7 +655,7 @@ function functionExpression() {
  * * https://developer.mozilla.org/de/docs/Web/JavaScript/Guide/Funktionen
  */
 function callback(functionExpectingACallback) {
-  functionExpectingACallback(function(array, fn) { fn(array[1])})
+  functionExpectingACallback(function(array, fn) { fn(array[1])});
 }
 
 /**
@@ -689,7 +692,7 @@ function callback(functionExpectingACallback) {
  * * https://developer.mozilla.org/de/docs/Web/JavaScript/Guide/Funktionen
  */
 function lambda() {
-  return (x, y, fn) => fn(Math.round(x), Math.round(y))
+  return (x, y, fn) => fn(Math.round(x), Math.round(y));
 }
 
 /**
@@ -740,8 +743,8 @@ function lambda() {
  * * https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Array
  */
 function filter(){
-  const arrayOfKeys = functionCall()
-  return arrayOfKeys.filter(k => k.includes("name"))
+  const arrayOfKeys = functionCall();
+  return arrayOfKeys.filter(k => k.includes("name"));
 }
 
 /**
@@ -765,7 +768,10 @@ function filter(){
  * * https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Object
  */
 function transform(testObject) {
-  return Object.keys(testObject.details).filter(k => k.includes("secret")).map(k => testObject.details[k])
+  return Object
+          .keys(testObject.details)
+          .filter(k => k.includes("secret"))
+          .map(k => testObject.details[k]);
 }
 
 /**
@@ -779,7 +785,9 @@ function transform(testObject) {
  * * https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Object
  */
 function transformImproved(testObject) {
-  return Object.entries(testObject.details).filter(([k]) => k.includes("secret"))
+  return Object
+          .entries(testObject.details)
+          .filter(([k]) => k.includes("secret"));
 }
 
 /**
@@ -793,10 +801,12 @@ function transformImproved(testObject) {
  * * https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Object
  */
 function transformImprovedFurther(testObject) {
-  const filtered = Object.entries(testObject.details).filter(([k]) => k.includes("secret"));
-  return Object.fromEntries(filtered)
+  const filtered = Object
+                    .entries(testObject.details)
+                    .filter(([k]) => k.includes("secret"));
+  return Object.fromEntries(filtered);
   // or
-  // return Object.assign({}, ...filtered.map(([key, val]) => ({[key]: val})))
+  // return Object.assign({}, ...filtered.map(([key, val]) => ({[key]: val})));
 }
 
 module.exports = {
