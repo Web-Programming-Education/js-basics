@@ -24,7 +24,6 @@
  * Aufgabe: Gib den Wert des Parameters wieder zurück, um eine erste, nicht sehr hilfreich aber funktionsfähige Funktion zu schrieben. 
  */
 function returnValue(someValue) {
-  // TODO: Gib `someValue` zurück
   return someValue;
 }
 
@@ -56,7 +55,6 @@ function returnValue(someValue) {
  * * https://developer.mozilla.org/de/docs/Glossary/undefined
  */
 function undefinedVariable() {
-  // TODO: deklariere die Variable `variable` mit `let`, weiße ihr aber keinen Wert zu
   let variable;
 
   return variable;
@@ -89,7 +87,6 @@ function undefinedVariable() {
  * * https://developer.mozilla.org/de/docs/Glossary/null
  */
 function nullVariable() {
-  // TODO: Definiere eine Variable mit null
   const variable = null;
   return variable;
 }
@@ -106,7 +103,6 @@ function nullVariable() {
  * * https://developer.mozilla.org/de/docs/Web/JavaScript/Datenstrukturen#Number_type
  */
 function numberVariable() {
-  // TODO: Definiere eine Variable mit Zahlenwert
   const variable = 5;
   
   return variable;
@@ -129,7 +125,6 @@ function numberUsageSimple() {
   const a = 5;
   const b = 2.75;
 
-  // TODO: Definiere die Variable c, nutzen dabei die Variablen c, um das gewünscht Ergebnis zu erhalten.
   const c = (a + b) / 2;
 
   return c;
@@ -153,7 +148,6 @@ function numberUsageMath() {
   const a = 349;
   const b = 1237;
 
-  // TODO: Gib das Maximum der beiden Zahlen a und b als Funktionsergebnis zurück.
   return Math.max(a, b)
 }
 
@@ -175,7 +169,6 @@ function numberUsageMath() {
  * * https://developer.mozilla.org/de/docs/Web/JavaScript/Datenstrukturen#String_Datentyp
  */
 function stringVariable() {
-  // TODO: Definiere die Variable "variable" mit einem beliebigen Text
   const variable = "some string";
   
   return variable;
@@ -196,7 +189,6 @@ function stringVariable() {
 function numberToString() {
   const a = 6
 
-  // TODO: gibt die Zahl als Text zurück
   return a.toString()
 }
 
@@ -222,9 +214,7 @@ function numberToString() {
  * * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#Instance_methods
  */
 function stringManipulation(text) {
-  // TODO: Ersetze in diesem String das Wort "float" durch "number"
   const newText = text.replace("float", "number")
-  // TODO: Gib dann die Länge des Strings zurück.
   return newText.length;
 }
 
@@ -244,9 +234,7 @@ function stringManipulation(text) {
  * * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#Instance_methods
  */
 function stringToArray(text) {
-  // TODO: Trenne den Text in Wörter auf
   const wordArray = text.split(" ")
-  // TODO: Gibt das 3. Wort zurück
   return wordArray[2]
 }
 
@@ -270,7 +258,6 @@ function stringToArray(text) {
  * * https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Array
  */
 function arrayVariable() {
-  // TODO: Definiere eine Variable mit einem Array
   const variable = [1, 2];
   
   return variable;
@@ -287,8 +274,6 @@ function arrayVariable() {
  * * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
  */
 function arrayIncludes(listOfNumbers) {
-  // TODO: Erstelle eine Variable mit boolschem Wert, der angibt,
-  // ob `listOfNumbers` die Zahl 5 als Listenelement enthält undg ibt das Ergebnis zurück
   return listOfNumbers.includes(5)
 }
 
@@ -328,7 +313,6 @@ function arrayIncludes(listOfNumbers) {
  * * https://developer.mozilla.org/de/docs/Glossary/Boolean
  */
 function condition(isSomeBool) {
-  // TODO: prüfen die Variable `isSomeBool` mit einer Bedingung
   if (isSomeBool) {
     return "ist wahr"
   } else {
@@ -363,7 +347,6 @@ function condition(isSomeBool) {
  * * https://developer.mozilla.org/de/docs/Web/JavaScript/Guide/Ausdruecke_und_Operatoren#Logische_Operatoren
  */
 function booleanExpressions(param1, param2) {
-  // TODO: schreibe die `if`-Bedingung, sodass `param1` wahr und `param2` falsch sein muss.
   if (param1 && !param2) {
     return "param1 ist wahr und param2 falsch"
   } else {
@@ -398,7 +381,7 @@ function booleanExpressions(param1, param2) {
  * Bei Vergleichen mit `===` oder `!==` dagegen nicht. Diese Operatoren werden empfohlen,
  * um Fehler durch eine automatische Konvertierung zu vermeiden.
  * 
- * Siehe dazu auch: FIXME: Folien-Link
+ * Siehe dazu auch: https://web-programming-lecture.gitlab.io/lecture-notes/03-javascript-basics/#/4/5
  * 
  * Aufgabe: Finde heraus, warum die automatische Typkonvertierung problematisch sein kann.
  * Die Funktion `console.log` schreibt beliebige Variablen auf die Konsole/Terminal
@@ -435,7 +418,6 @@ function equality() {
     console.log("NaN ==  NaN: ", NaN ==  NaN)
   }
 
-  /* TODO: Gib die Ergebnisse der Vergleiche in er obigen Reihenfolge als Array von booleans zurück */
   return [ false, true, false, true, true, false, false, false]
 }
 
@@ -479,7 +461,6 @@ function equality() {
  * * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Objects
  */
 function objectVariable() {
-  // TODO: erstelle ein Objekt mit genau 5 Schlüssel-/Wertpaaren
   return {
     a: "10",
     b: 20,
@@ -519,7 +500,6 @@ function objectVariable() {
  * * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Objects
  */
 function objectManipulation(someObject) {
-  // TODO: Gib alle Schlüssel des Kind-Objekts "someChildObject" von `someObject` als Array zurück
   return Object.keys(someObject.someChildObject)
 }
 
@@ -545,11 +525,8 @@ function objectManipulation(someObject) {
  * * https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/JSON
  */
 function json(someJSONString) {
-  // TODO: Konvertiere den String in ein Objekt
   const a = JSON.parse(someJSONString)
-  // TODO: Füge das Schlüssel-/Wertpaar hinzu
   a.x = 5
-  // TODO: Gib das Objekt als JSON-String zurück
   return JSON.stringify(a)
 }
 
@@ -675,9 +652,6 @@ function functionExpression() {
  * * https://developer.mozilla.org/de/docs/Web/JavaScript/Guide/Funktionen
  */
 function callback(functionExpectingACallback) {
-  // TODO: schreibe eine Funktion mit 2 Parameter: 1. Array, 2. Funkion
-  // Rufe die übergebene Funktion mit dem 2. Array-Element als Übergabeparameter auf
-  // Übergib die so definierte Funktion als Übergabeparameter an `functionExpectingACallback`
   functionExpectingACallback(function(array, fn) { fn(array[1])})
 }
 
@@ -766,9 +740,7 @@ function lambda() {
  * * https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Array
  */
 function filter(){
-  // TODO: Rufe die Funktion `functionCall` auf und speichere das Ergebnis in einer Variablen
   const arrayOfKeys = functionCall()
-  // TODO: Filtere diese Array-Variable mit der Funktion `filter` und gib das Ergebnis zurück
   return arrayOfKeys.filter(k => k.includes("name"))
 }
 
@@ -793,7 +765,6 @@ function filter(){
  * * https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Object
  */
 function transform(testObject) {
-  // TODO: Gib alle Werte der "secret"-Schlüssel aus dem Kind-Objekt "details" zurück
   return Object.keys(testObject.details).filter(k => k.includes("secret")).map(k => testObject.details[k])
 }
 
@@ -808,7 +779,6 @@ function transform(testObject) {
  * * https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Object
  */
 function transformImproved(testObject) {
-  // TODO: gib die Schlüssel zu den Werten der vorigen Aufgabe mit aus [[schlüssel, wert], [schlüssel, wert]]
   return Object.entries(testObject.details).filter(([k]) => k.includes("secret"))
 }
 
@@ -823,14 +793,11 @@ function transformImproved(testObject) {
  * * https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Object
  */
 function transformImprovedFurther(testObject) {
-  // TODO: gib das gleiche Ergebnis wie in der vorigen Aufgabe als Objekt zurück
   const filtered = Object.entries(testObject.details).filter(([k]) => k.includes("secret"));
   return Object.fromEntries(filtered)
   // or
   // return Object.assign({}, ...filtered.map(([key, val]) => ({[key]: val})))
 }
-
-// FIXME: spread?
 
 module.exports = {
   returnValue,
