@@ -163,7 +163,7 @@ function numberUsageMath() {
  * Bei Interesse gibt es in [dieser Diskussion](https://stackoverflow.com/questions/242813/when-should-i-use-double-or-single-quotes-in-javascript) Details dazu.
  * Wir verwenden im Folgenden doppelte Anführungszeichen `"`.
  * 
- * Aufgabe: Definiere die Variable "variable" mit einem beliebigen Text
+ * Aufgabe: Definiere die konstante Variable "variable" mit einem beliebigen Text
  * 
  * Referenz: 
  * * https://developer.mozilla.org/de/docs/Web/JavaScript/Datenstrukturen
@@ -179,7 +179,8 @@ function stringVariable() {
 /**
  * Zahlen können in Strings umgewandelt werden.
  * 
- * Variablen aller Datentypen besitzen zu diesem Zweck die Funktion `toString`
+ * Variablen aller Datentypen besitzen zu diesem Zweck die Methode `toString`,
+ * die mit der Punktnotation (`variable.toString()`) aufgerufen werden kann.
  * 
  * Aufgabe: Konvertiere die Variable a, die eine Zahl darstellt,
  * in einen String und gib diesen zurück
@@ -205,7 +206,9 @@ function numberToString() {
  * Properties sind Schlüssel-/Wertpaare und Werte können über die Dot-Notation ausgelesen werden.
  * Im Gegensatz zu Funkionen werden jedoch keine Klammern genutzt.
  * 
- * Die folgende Funktion erhählt einen String als Parameter.
+ * Die folgende Funktion erhält einen String als Parameter mit dem Namen `text`.
+ * Dieser Parameter kann wie eine Variable genutzt werden.
+ * Deren Inhalt ist vordefiniert und müsst ihr nicht kennen.
  * Aufgabe: Ersetze in diesem String das Wort "float" durch "number"
  * Gib dann die Länge des Strings zurück.
  * 
@@ -483,7 +486,7 @@ function objectVariable() {
  * 
  * Aufgabe: Die Funktion bekommt ein geschachteltes Objekt übergeben, d.h.
  * der Wert des Schlüssels "someChildObject" ist ebenfalls ein Objekt
- * Gib alle Schlüssel dieses Kind-Objekts zurück
+ * Gib alle Schlüssel dieses Kind-Objekts als Array zurück
  * 
  * Referenz:
  * * https://developer.mozilla.org/de/docs/Glossary/Objekt
@@ -491,7 +494,7 @@ function objectVariable() {
  * * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Objects
  */
 function objectManipulation(someObject) {
-  // TODO: Gib alle Schlüssel des Kind-Objekts `someChildObject` von `someObject` zurück
+  // TODO: Gib alle Schlüssel des Kind-Objekts `someChildObject` von `someObject` als Array zurück
 }
 
 /**
