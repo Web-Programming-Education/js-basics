@@ -4,6 +4,7 @@ Dieses Verzeichnis enthält Übungen für die Grundlagen in Javascript.
 
 ## Voraussetzung
 
+* NodeJS & NPM installiert
 * VS Code installiert
 * (optional, aber empfohlen) VS Code Erweiterungen installiert
   * [JSDoc Markdown highlight](https://marketplace.visualstudio.com/items?itemName=bierner.jsdoc-markdown-highlighting)
@@ -17,12 +18,12 @@ Dieses Verzeichnis enthält Übungen für die Grundlagen in Javascript.
 ├── exercises.js          => Die Übungen liegen in dieser Datei
 ├── exercises.test.js     => Diese Datei enthält Testfälle für die Übungen
 ├── package.json          => Diese Datei enthält Informationen zu diesem Projekt und den benötigten Abhängigkeiten
-└── readme.md             => Diese Datei
+└── readme.md             => Beinhaltet diesen Text
 ```
 
 ## Vorbereitung 
 
-Um die Aufgaben bearbeiten zu können, müsen zunächst einige Hilfspakete als Abhängigkeiten installiert werden.
+Um die Aufgaben bearbeiten zu können, müssen zunächst einige Hilfspakete als Abhängigkeiten installiert werden.
 
 Die benötigten Pakete sind in der Datei [package.json](package.json) unter `dependencies`/`devDependencies` zu finden, z.B.:
 
@@ -50,7 +51,7 @@ In diesem Terminal wird der obige Befehl eingegeben und danach auch die Testausf
 
     Die Tests werden initial und bei jeder Änderung in der Datei [exercises.js](exercises.js) ausgeführt und es wird ein Gesamtüberblick über die Erfolgsquote ausgegeben.
 
-    Pro Fehler gibt es eine detaillierte Ausgabe mit der Beschreibung des Fehlergrundes:
+    Pro Fehler gibt es eine detaillierte Ausgabe mit der Beschreibung des Fehlergrundes (ggf. hochscollen im Terminal):
 
     * Rote Überschrift: fehlerhafter Testfall - bei uns immer der Name der Funktion in `exercises.js` gefolgt vom erwarteten Ergebnis
     * Darunter der Testcode der fehlschlägt (hiermit kann nachvollzogen werden, was der Test prüft)
