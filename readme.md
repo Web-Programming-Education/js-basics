@@ -43,13 +43,13 @@ In diesem Terminal wird der obige Befehl eingegeben und danach auch die Testausf
 
 ## Vorgehen
 
-1. Testausführung über das integrierte Terminal starten
+1. Testausführung direkt über `F5` oder das integrierte Terminal starten:
 
     ```
     npm test
     ```
 
-    Die Tests werden initial und bei jeder Änderung in der Datei [exercises.js](exercises.js) ausgeführt und es wird ein Gesamtüberblick über die Erfolgsquote ausgegeben.
+    Die Tests werden initial und bei jeder Änderung in der Datei [exercises.js](exercises.js) ausgeführt und im Terminal wird ein Gesamtüberblick über die Erfolgsquote ausgegeben.
 
     Pro Fehler gibt es eine detaillierte Ausgabe mit der Beschreibung des Fehlergrundes (ggf. hochscollen im Terminal):
 
