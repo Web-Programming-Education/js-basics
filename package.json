@@ -4,7 +4,7 @@
   "description": "Learn Javascript basics with unit tests",
   "main": "exercises.js",
   "scripts": {
-    "test": "jest --watch",
+    "test": "jest --watchAll",
     "lint": "eslint exercises.js"
   },
   "author": "Matthias Harrer / David Randler",
