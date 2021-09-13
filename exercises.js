@@ -44,7 +44,7 @@ function returnValue(someValue) {
  * (Mit `const` deklarierte Variablen müssen zugleich definiert werden)
  * 
  * Eine undefinierte, aber deklarierte Variable hat den Wert `undefined`.
- * Die ist zugleich der erste primitive Datentyp in Javascript.
+ * Dieser ist zugleich der erste primitive Datentyp in Javascript.
  * 
  * Aufgabe: Deklariere die änderbare 
  * Variable "variable" ohne ihr einen Wert zuzuweisen.
@@ -55,7 +55,7 @@ function returnValue(someValue) {
  * * https://developer.mozilla.org/de/docs/Glossary/undefined
  */
 function undefinedVariable() {
-  // TODO: deklariere die Variable `variable` mit `let`, weiße ihr aber keinen Wert zu
+  // TODO: deklariere die Variable `variable`, weiße ihr aber keinen Wert zu
 
 
   return variable;
@@ -71,13 +71,13 @@ function undefinedVariable() {
  * 
  * In diesem Fall ist es ratsam das Schlüsselwort `const` zu verwenden,
  * außer die Variable muss zwingend im weiteren Programmverlauf neu zugewiesen werden.
- * Sich ändernde Variable führen zu einem schwerer Nachvollziehbaren Programmablauf.
+ * Sich ändernde Variable führen zu einem schwerer nachvollziehbaren Programmablauf.
  * Aus diesem Grund nutzen wir ab jetzt, wann immer möglich,
  * `const` für die Deklaration und Definition von Variablen.
  * 
  * Der zweite primitive Datentyp und "Spezialfall" neben `undefined` ist `null`.
  * Im Unterschied zu `undefined` bedeutet die Zuweisung von `null`, 
- * dass wir explizit ausdrücken wollen, dass einen Variable leer ist.
+ * dass wir explizit ausdrücken wollen, dass eine Variable leer ist.
  * 
  * Aufgabe: Definiere die konstante, nicht änderbare 
  * Variable "variable" mit dem Wert `null`, dem zweiten primitiven Datentyp in JS
@@ -97,7 +97,7 @@ function nullVariable() {
  * Als nächstes arbeiten wir mit Zahlen.
  * 
  * Aufgabe: Definiere die konstante, nicht änderbare 
- * Variable "variable" mit einem Zahlenwert, dem dritten primitiven Datentyp in JS
+ * Variable "variable" mit einem Zahlenwert, dem dritten primitiven Datentyp in JS.
  * 
  * Referenz: 
  * * https://developer.mozilla.org/de/docs/Web/JavaScript/Datenstrukturen
@@ -113,7 +113,8 @@ function numberVariable() {
 /**
  * Der Datentyp "number" umfasst in Javascript nicht nur ganze Zahlen wie 2, 15, 400
  * sondern auch Kommazahlen, die überlicherweise als "floats" bezeichnet werden 
- * und in vielen anderen Programmiersprachen ein eigener Datentyp sind: 0.76, 1.2 140.00121212
+ * und im Unterschied zu JS in vielen anderen Programmiersprachen als eigener 
+ * Datentyp abgebildet sind. Bsp: 0.76, 1.2, 140.00121212
  * 
  * Zahlen können wie in anderen Programmiersprachen mathematisch kombiniert werden.
  * 
@@ -195,7 +196,7 @@ function numberToString() {
 }
 
 /**
- * Strings selbst haben Funktionen für deren Auswertung/Manipulation,
+ * String-Objekte selbst definieren Funktionen für deren Auswertung/Manipulation,
  * z.B. 
  * * `replace`, um Teile des Textes zu ersetzen (Hinweis: der String selbst wird nicht verändert, 
  *    das Ergebnis muss einer neuen Variable zugewiesen werden)
@@ -203,12 +204,12 @@ function numberToString() {
  * * `includes`, um zu prüfen ob ein bestimmter Text enthalten ist
  * 
  * Außerdem kann die Länge eines Strings über das Property `length` abgfragt werden.
- * Properties sind Schlüssel-/Wertpaare und Werte können über die Dot-Notation ausgelesen werden.
+ * Properties sind Schlüssel-/Wertpaare in einm Objekt (s.u.) und Werte können über die Dot-Notation ausgelesen werden.
  * Im Gegensatz zu Funkionen werden jedoch keine Klammern genutzt.
  * 
- * Die folgende Funktion erhält einen String als Parameter mit dem Namen `text`.
+ * Die folgende Funktion bekommt einen String als Parameter mit dem Namen `text` übergeben.
  * Dieser Parameter kann wie eine Variable genutzt werden.
- * Deren Inhalt ist vordefiniert und müsst ihr nicht kennen.
+ * Deren Inhalt ist vordefiniert, ihr müsst ihn nicht kennen.
  * Aufgabe: Ersetze in diesem String das Wort "float" durch "number"
  * Gib dann die Länge des Strings zurück.
  * 
@@ -221,7 +222,7 @@ function stringManipulation(text) {
 }
 
 /**
- * Ein String kann in Einzelteile zerlegt werden (Funktion split).
+ * Ein String kann in Einzelteile zerlegt werden (Funktion `split`).
  * Dadurch entsteht eine Liste von Teilstrings.
  * 
  * Listen werden in Progammiersprachen als "Arrays" bezeichnet und
@@ -241,7 +242,7 @@ function stringToArray(text) {
 }
 
 /**
- * Um ein Array manuell anzulegen nutze eckige Klammern gefolgt von durch Komma getrennte Werte.
+ * Um ein Array manuell anzulegen, nutze eckige Klammern gefolgt von, durch Komma getrennte, Werte.
  * 
  * Aufgabe: Definiere eine Variable mit einem Array mit 
  * genau 2 Elementen eines beliebigen primitiven Datentyps
@@ -249,10 +250,10 @@ function stringToArray(text) {
  * Hinweis: Die Testfunktion zu der folgenden Funktion,
  * siehe ([exercises.test.js](exercises.test.js), Test: arrayVariable), kann
  * im Vergleich zu den vorigen Datentyp-Aufgaben, nicht einfach den Datentyp prüfen, 
- * sondern muss eine spezielle Funktion: `Array.isArray`.
- * Damit wird geprüft, ob die Variable ein Array ist.
- * Ein weiterer Hinweis, das Arrays kein eigener Datentyp sind.
- * Warum, wird später deutlich
+ * sondern nutzt eine spezielle Funktion: `Array.isArray`.
+ * Damit wird geprüft, ob die Variable `variable` ein Array ist.
+ * Ein weiteres Anzeichne, dass Arrays kein eigener Datentyp sind.
+ * Warum, wird später deutlich.
  * 
  * Referenz: 
  * * https://developer.mozilla.org/de/docs/Web/JavaScript/Datenstrukturen#Indizierte_Collections_Arrays_und_typisierte_Arrays
@@ -290,7 +291,7 @@ function arrayIncludes(listOfNumbers) {
  * (6. Symbol - betrachten wir in dieser Einführung nicht)
  * 
  * Booleans stellen die Wahrheitswerte wahr/falsch dar.
- * Damit sind sie besonders in Kontrollstruktur relevant
+ * Damit sind sie besonders in Kontrollstrukturen relevant
  * Beispielsweise wird der Code innerhalb der ersten geschweiften Klammern der `if`-Verzweigung ausgeführt, 
  * wenn die Variable x den Wert `true` hat.
  * 
@@ -304,11 +305,11 @@ function arrayIncludes(listOfNumbers) {
  * Überprüfe die Variable `isSomeBool` mit einer Bedingung, wie im obigen Beispiel.
  * Gib `"ist wahr"` zurück wenn `isSomeBool` wahr ist.
  * `if`-Verzweigungen können auch einen "sonst"-Fall haben.
- * Wie das geht kennst du entweder aus anderen Programmiersprachen oder kannst es leicht herausfinden. 
+ * Wie das geht kennst du entweder bereits aus anderen Programmiersprachen oder kannst es leicht herausfinden. 
  * Gib in diesem Fall, also wenn `isSomeBool` falsch ist, `"ist falsch"` zurück.
  * 
  * Hinweis: es kann mehrere `return`-Anweisungen in einer Funktion geben. 
- * Alternativ kannst du eine Variable vor der Bedingung deklarieren und diese in den Verzweigungen zuweisen
+ * Alternativ kannst du eine Variable vor der Bedingung deklarieren und diese in den Verzweigungen zuweisen.
  * 
  * Referenz:
  * * https://developer.mozilla.org/de/docs/Web/JavaScript/Datenstrukturen
@@ -372,8 +373,8 @@ function booleanExpressions(param1, param2) {
  * wäre dieses Beispiel ein (Compiler-)Fehler.
  * 
  * Durch diese dynamische Typisierung funktionieren auch Vergleiche auf Gleichheit in JS
- * anders als in anderen Programmiersprachen.
- * In diesen muss ein Vergleich aus zwei gleichen Datentypen bestehen.
+ * anders als in anderen Programmiersprachen, in welchen
+ * ein Vergleich aus zwei gleichen Datentypen bestehen muss.
  * 
  * In JS ist es möglich, aber oft nicht empfehlenswert, Variablen unterschiedlichen Typs zu vergleichen.
  * 
@@ -387,7 +388,7 @@ function booleanExpressions(param1, param2) {
  * Die Funktion `console.log` schreibt beliebige Variablen auf die Konsole/Terminal
  * Du findest die Ausgabe, wenn du die Tests ausführst.
  * Vorher musst du die existierende Bedingung jedoch korrigieren,
- * sodass der Inhalt der `if`-Verzweigung asugeführt wird.
+ * sodass der Inhalt der `if`-Verzweigung ausgeführt wird.
  *
  * Gib die Ergebnisse als Array zurück
  * 
@@ -447,7 +448,7 @@ function equality() {
  * }
  * ```
  * 
- * Nutze für für die Werte alle der folgenden Datentypen:
+ * Nutze für die Werte alle der folgenden Datentypen:
  * * string
  * * number
  * * boolean
@@ -465,11 +466,11 @@ function objectVariable() {
 }
 
 /**
- * Auch Objekte können asugewertet und bearbeitet werden.
+ * Auch Objekte können ausgewertet und bearbeitet werden.
  * 
  * Zugriff auf den Wert eines Schlüssels `Key`: 
  * * `object.Key` (Dot-Notation) oder 
- * * `object["Key"]`, wenn der Schlüssel Leerzeichen enthält
+ * * `object["Key"]`, wenn der Schlüssel Leerzeichen/Sonderzeichen enthält
  * 
  * Hinzufügen eines Elements über dieselben Notationen durch Zuweisung: 
  * ```js
@@ -538,7 +539,7 @@ function json(someJSONString) {
  * 
  * Aufrufe/Nutzen von Funktionen
  * * Funktionen werden mit ihrem Namen gefolgt von runden Klammern aufgerufen
- * * In den runden Klammern können durch Komma getrennt die Werte für Parameter angegeben werden
+ * * In den runden Klammern können, durch Komma getrennt, die Werte für Parameter angegeben werden
  * 
  * Wie wir z.B. bei Funktionen wie `text.split(...)`, `Object.keys(...)` & `JSON.parse(...)` gesehen haben,
  * können Funktionen auch Objekten zugeordnet sein und werden dann mit Dot-Notation aufgerufen.
@@ -552,7 +553,7 @@ function json(someJSONString) {
  * sondern auch ändernd auf das übergebene Objekt zugreifen (z.B. `someObject.someChildObject = "neuer Wetrt"`),
  * würde diese Änderung auch außerhalb der Funktion, d.h in unserer Tesfunktion `functionCall` sichtbar.
  * Der Grund ist, dass bei Objekten im Vergleich zu den primitiven Datentypen nicht nur der Wert (als Kopie),
- * sondern die Referenz auf das existierende Objekt übergeben wird. Somit weiße bei Funktionen auf dasselbe Objekt
+ * sondern die Referenz auf das existierende Objekt übergeben wird. Somit weißen beide Funktionen auf dasselbe Objekt
  * und schriebende Manipulationen beeinflussen beide.
  * Da dies sehr undruchschaubar werden kann, sollte auf Änderungen von Objekten in einer Funktion, 
  * wenn möglich, verzichtet werden.
@@ -612,7 +613,7 @@ function functionExpression() {
  * Ein weiteres Anwendungsgebiet von Funktionsparameter sind asynchrone Callbacks.
  * Diese werden genutzt, um eine vom Aufrufer bestimmte Aktion mit einem Ergebnis auszuführen.
  * Bei den bislang betrachteten Funktionen ist das wenig sinnvoll, wir haben ja den Rückgabewert.
- * Mit diesem kann der Aufrufe sowieso machen was er will.
+ * Mit diesem kann der Aufrufer sowieso machen was er will.
  * 
  * Unabdingbar sind Callbacks jedoch, wenn die Operation, die das Ergebnis berechnet/abruft
  * eine unbekannte, lange Laufzeit hat. Beispiele sind Netzwerk oder Dateiabrufe.
@@ -711,7 +712,7 @@ function lambda() {
  * console.log(result) // gibt ['name', 'surname'] aus
  * ```
  * 
- * mit einer vereinfachten for-Schleife in JS zumindest:
+ * mit einer vereinfachten for-of-Schleife in JS zumindest:
  * ```js
  * let result;
  * for (var key of arrayOfKeys) {
@@ -724,7 +725,7 @@ function lambda() {
  * 
  * Noch einfacher und insbesondere aussagekräftiger geht es mit der Array-Funktion `filter`,
  * die per Dot-Notation auf einer Array-Variablen aufgerufen werden kann.
- * Die wird mit einer Funktione aufgerufen, die als Filter dient und auf jedem Element angewandt wird.
+ * Sie wird mit einer Funktion aufgerufen, die als Filter dient und auf jedem Element angewandt wird.
  * Nur Elementen, für die diese Funktion `true` zurückgibt, sind im Ergebnis (einem Array) enthalten.
  * 
  * Aufgabe: Filtere die Schlüsselliste die die Funktion `functionCall` zurückgibt,
